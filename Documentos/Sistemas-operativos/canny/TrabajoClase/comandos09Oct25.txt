@@ -1,0 +1,2055 @@
+    1  ls
+    2  ls  -l
+    3  ls -la 
+    4  ls
+    5  ls -la 
+    6  clear
+    7  ls
+    8  ls -l
+    9  cd
+   10  cd ..
+   11  ls
+   12  ls 
+   13  sh <(curl -L https://raw.githubusercontent.com/JaKooLit/Fedora-Hyprland/main/auto-install.sh)>
+   14  sh <(curl -L https://raw.githubusercontent.com/JaKooLit/Fedora-Hyprland/main/auto-install.sh)
+   15  sudo dnf install firefox
+   16  ip list
+   17  nmcli device status
+   18  ip link
+   19  sudo lspci -nnk | grep -iA4 net
+   20  lsusb
+   21  sudo rfkill list
+   22  sudo dmesg | tail -n 80
+   23  sudo systemctl enable --now NetworkManager 
+   24  sudo systemctl restart NetworkManager 
+   25  nmcli device status
+   26  sudo rfkill unblock all
+   27  nmcli radio wifi on 
+   28  nmcli device wifi list 
+   29  sudo dnf update 
+   30  sudo dnf install linux-firmware
+   31  sudo modprobe -r iwlwifi && sudo modprobe iwlwifi
+   32  sudo dnf upgrade --refresh -y
+   33  nmcli device wifi list 
+   34  nmcli device status
+   35  sudo dnf install linux-firmware -y
+   36  sudo modprobe -r iwlwifi
+   37  sudo modprobe iwlwifi
+   38  dmesg | grep -i iwlwifi
+   39  nmcli device status
+   40  nmcli device wifi list 
+   41  sudo dmesg | grep -i iwlwifi\n
+   42  sudo bash -c 'for v in {77..89}; do \\n  url="https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/plain/iwlwifi-so-a0-hr-b0-$v.ucode"; \\n  echo "-> intentanto $v"; \\n  curl -fsSLo /lib/firmware/iwlwifi-so-a0-hr-b0-$v.ucode "$url" && echo "  descargado $v" || echo "  no existe $v"; \\ndone'
+   43  sudo modprobe -r iwlwifi
+   44  sudo modprobe iwlwifi
+   45  lsmod | grep iwlwifi\n
+   46  sudo modprobe -r iwlwifi
+   47  sudo modprobe iwlwifi
+   48  sudo rmmod iwlmvm
+   49  sudo rmmod iwlwifi
+   50  sudo modprobe iwlwifi
+   51  sudo dmesg | tail -n 40\n
+   52  lsmod | grep iwl
+   53  nmcli device status
+   54  nmcli device wifi list 
+   55  ip link
+   56  clear
+   57  git clone https://github.com/adnksharp/CyberGRUB-2077
+   58  cd CyberGRUB-2077
+   59  sudo $SHELL ./install.sh
+   60  [ -d /sys/firmware/efi ] && echo "UEFI" || echo "BIOS/Legacy"\n
+   61  sudo ls -l /boot/grub2/themes || true\nsudo ls -l /boot/efi/EFI/fedora/themes 2>/dev/null || true\ngrep -n "GRUB_THEME" /etc/default/grub || echo "GRUB_THEME no encontrado en /etc/default/grub"\n
+   62  sudo find /boot -maxdepth 3 -type f -name grub.cfg -print\n
+   63  ls -l /boot/grub/themes || true~
+   64  git clone https://github.com/adnksharp/CyberGRUB-2077
+   65  cd CyberGRUB-2077
+   66  sudo $SHELL ./install.sh
+   67  sudo ls -l /boot/grub2/themes || true
+   68  sudo ls -l /boot/efi/EFI/fedora/themes 2>/dev/null || true
+   69  grep -n "GRUB_THEME" /etc/default/grub || echo "GRUB_THEME no encontrado en /etc/default/grub"\n
+   70  exit
+   71  sudo ls -l /boot/grub2/themes || true\nsudo ls -l /boot/efi/EFI/fedora/themes 2>/dev/null || true\ngrep -n "GRUB_THEME" /etc/default/grub || echo "GRUB_THEME no encontrado en /etc/default/grub"\n
+   72  sudo find /boot -maxdepth 3 -type f -name grub.cfg -print\n
+   73  sudo mkdir -p /boot/grub2/themes\nsudo cp -r ~/CyberGRUB-2077 /boot/grub2/themes/\n
+   74  sudo sed -i 's|/boot/grub/themes|/boot/grub2/themes|' /etc/default/grub\n
+   75  sudo grub2-mkconfig -o /boot/grub2/grub.cfg\n
+   76  sudo reboot\n
+   77  GRUB_TERMINAL_OUTPUT="gfxterm"\n
+   78  git clone https://github.com/adnksharp/CyberGRUB-2077
+   79  cd CyberGRUB-2077
+   80  sudo $SHELL ./install.sh
+   81  sudo mkdir -p /boot/grub2/themes\nsudo cp -r ~/CyberGRUB-2077 /boot/grub2/themes/\n
+   82  sudo nano /etc/default/grub\n
+   83  ^[[200~sudo grub2-mkconfig -o /boot/grub2/grub.cfg
+   84  sudo grub2-mkconfig -o /boot/grub2/grub.cfg\n
+   85  sudo reboot\n
+   86  sudo grub2-editenv - unset menu_auto_hide\n
+   87  sudo nano /etc/default/grub\n
+   88  ^[[200~sudo grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg
+   89  sudo grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg\n
+   90  sudo grub2-mkconfig -o /boot/grub2/grub.cfg\n
+   91  sudo reboot\n
+   92  [ -d /sys/firmware/efi ] && echo "UEFI" || echo "BIOS/Legacy"\n
+   93  sudo grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg\n
+   94  sudo grub2-mkconfig -o /boot/grub2/grub.cfg\n
+   95  sudo grub2-editenv - unset menu_auto_hide\nsudo nano /etc/default/grub\n
+   96  sudo mkdir -p /boot/grub2/themes\n
+   97  sudo cp -r ~/CyberGRUB-2077 /boot/grub2/themes/\n
+   98  sudo sed -i '\n  s|GRUB_TERMINAL_OUTPUT="console"|GRUB_TERMINAL_OUTPUT="gfxterm"|\n  s|^GRUB_THEME=.*|GRUB_THEME="/boot/grub2/themes/CyberGRUB-2077/theme.txt"|\n' /etc/default/grub\n
+   99  sudo grub2-editenv - unset menu_auto_hide\nsudo sed -i '/GRUB_TIMEOUT_STYLE=/d' /etc/default/grub\nsudo bash -c 'echo "GRUB_TIMEOUT_STYLE=menu" >> /etc/default/grub'\n
+  100  sudo grub2-mkconfig -o /boot/grub2/grub.cfg\n
+  101  sudo reboot\n
+  102  git clone https://github.com/adnksharp/CyberGRUB-2077
+  103  cd CyberGRUB-2077
+  104  sudo $SHELL ./install.sh
+  105  sudo nano /etc/default/grub\n
+  106  sudo bash -c '\nmkdir -p /boot/grub2/themes &&\ncp -r ~/CyberGRUB-2077 /boot/grub2/themes/ &&\nsed -i '"'"'s|GRUB_TERMINAL_OUTPUT="console"|GRUB_TERMINAL_OUTPUT="gfxterm"|; s|^GRUB_THEME=.*|GRUB_THEME="/boot/grub2/themes/CyberGRUB-2077/theme.txt"|' /etc/default/grub &&\ngrub2-editenv - unset menu_auto_hide &&\nprintf "\nGRUB_TIMEOUT_STYLE=menu\n" >> /etc/default/grub &&\ngrub2-mkconfig -o /boot/grub2/grub.cfg\n\nsudo reboot\n
+  107  sudo mkdir -p /boot/efi/EFI/fedora/themes\nsudo cp -r ~/CyberGRUB-2077 /boot/efi/EFI/fedora/themes/\n
+  108  ^[[200~sudo mkdir -p /boot/efi/EFI/fedora/themes
+  109  sudo cp -r ~/CyberGRUB-2077 /boot/efi/EFI/fedora/themes/
+  110  sudo mkdir -p /boot/efi/EFI/fedora/themes\nsudo cp -r ~/CyberGRUB-2077 /boot/efi/EFI/fedora/themes/\n
+  111  GRUB_THEME="/boot/efi/EFI/fedora/themes/CyberGRUB-2077/theme.txt"\n
+  112  GRUB_TERMINAL_OUTPUT="gfxterm"\n
+  113  sudo efibootmgr -v | grep Fedora\n
+  114  sudo mkdir -p /boot/efi/EFI/fedora/themes\nsudo cp -r ~/CyberGRUB-2077 /boot/efi/EFI/fedora/themes/\n
+  115  sudo nano /etc/default/grub\n
+  116  sudo grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg\n
+  117  sudo grub2-mkconfig -o /boot/grub2/grub.cfg\n
+  118  sudo nano /etc/default/grub\n
+  119  sudo efibootmgr -v\n
+  120  sudo grub2-mkconfig -o /boot/grub2/grub.cfg\n\n
+  121  ls -l /boot/grub2/grub.cfg /boot/efi/EFI/fedora/grub.cfg\n
+  122  clear
+  123  sudo efibootmgr -v\n
+  124  grep GRUB_THEME /etc/default/grub
+  125  sudo nano /etc/default/grub
+  126  ls -l /boot/grub/themes/CyberGRUB-2077/theme.txt
+  127  sudo grub2-mkconfig -o /boot/grub2/grub.cfg
+  128  less /boot/grub2/grub.cfg
+  129  sudo less /boot/grub2/grub.cfg\n
+  130  passwd\n
+  131  ps aux | grep -E 'wallpaper|background|bg|hyprpaper|wbg|mpv|swaybg'\n
+  132  grep -i 'exec' ~/.config/hypr/hyprland.conf\n
+  133  systemctl --user status\n
+  134  sudo dnf install mpvpaper\n
+  135  sudo dnf install wl-gammactl 
+  136  wl-gammactl
+  137  wl-gammactl\n
+  138  sudo dnf upgrade
+  139  sudo dnf update 
+  140  ls 
+  141  ls
+  142  ls -l
+  143  ls -la
+  144  sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+  145  printf "%s\n" \\n"[code]" \\n"name=Visual Studio Code" \\n"baseurl=https://packages.microsoft.com/yumrepos/vscode" \\n"enabled=1" \\n"gpgcheck=1" \\n"gpgkey=https://packages.microsoft.com/keys/microsoft.asc" | \\n  sudo tee /etc/yum.repos.d/vscode.repo > /dev/null
+  146  sudo dnf check-update
+  147  sudo dnf install -y code
+  148  code
+  149  ls
+  150  ls -l
+  151  code
+  152  ls 
+  153  /usr/bin/python /home/kike/Documentos/Graficacion-computacipnal/Practica01.py
+  154  python --version\npython3 --version\nwhich python\nwhich python3\n
+  155  sudo dnf install libreoffice
+  156  libreoffice 
+  157  uname -a
+  158  lsb_release -d
+  159  uname -r
+  160  uname .a
+  161  uname -a
+  162  uname -r
+  163  who
+  164  pwd
+  165  cd
+  166  cd ..
+  167  pwd
+  168  ls
+  169  ls -l
+  170  ls -la
+  171  cd /kike
+  172  cd kike
+  173  pwd
+  174  ls
+  175  cd documentos 
+  176  cd Documentos 
+  177  pwd
+  178  mkdir Sistemas-operativos
+  179  ls
+  180  cd Sistemas-operativos 
+  181  mkdir Pruebas 
+  182  ls
+  183  pwd
+  184  cd Pruebas
+  185  pwd
+  186  sudo dnf install mediawriter 
+  187  ls
+  188  cd Documentos 
+  189  ls
+  190  cd Sistemas-operativos 
+  191  ls
+  192  cd Pruebas
+  193  nano uno.txt
+  194  sudo nano uno.txt
+  195  ls
+  196  sudo dnf install mediawriter \n
+  197  ip link
+  198  sudo dnf install faltpack 
+  199  sudo dnf install flatpak
+  200  sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+  201  flatpak install flathub com.unity.UnityHub
+  202  sudo dnf update -y\nsudo dnf install -y openssl openssl-libs GConf2 openssl11\n
+  203  sudo sh -c 'echo -e "[unityhub]\nname=Unity Hub\nbaseurl=https://hub.unity3d.com/linux/repos/rpm/stable\nenabled=1\ngpgcheck=1\ngpgkey=https://hub.unity3d.com/linux/repos/rpm/stable/repodata/repomd.xml.key\nrepo_gpgcheck=1" > /etc/yum.repos.d/unityhub.repo'\n
+  204  sudo dnf check-update\nsudo dnf install -y unityhub\n
+  205  /usr/bin/python /home/kike/Documentos/Graficacion-computacipnal/Practica01.py
+  206  unityhub\n
+  207  /usr/bin/python /home/kike/Documentos/Graficacion-computacipnal/imagenes2D.py
+  208  pip install panda3d\n
+  209  /usr/bin/python /home/kike/Documentos/Graficacion-computacipnal/imagenes2D.py
+  210  /usr/bin/python /home/kike/Documentos/Graficacion-computacipnal/imagenes3D.py
+  211  /usr/bin/python /home/kike/Documentos/Graficacion-computacipnal/imagenes2D.py
+  212  /usr/bin/python /home/kike/Documentos/Graficacion-computacipnal/imagenes3D.py
+  213  /usr/bin/python /home/kike/Documentos/Graficacion-computacipnal/imagenes2D.py
+  214  /usr/bin/python /home/kike/Documentos/Graficacion-computacipnal/imagenes3D.py
+  215  /usr/bin/python /home/kike/Documentos/Graficacion-computacipnal/imagenes2D.py
+  216  /usr/bin/python /home/kike/Documentos/Graficacion-computacipnal/imagenes3D.py
+  217  /usr/bin/python /home/kike/Documentos/Graficacion-computacipnal/imagenes2D.py
+  218  /usr/bin/python /home/kike/Documentos/Graficacion-computacipnal/imagenes3D.py
+  219  code
+  220  /usr/bin/python /home/kike/Documentos/Graficacion-computacipnal/imagenes3D.py
+  221  /usr/bin/python /home/kike/Documentos/Graficacion-computacipnal/imagenes2D.py
+  222  /usr/bin/python /home/kike/Documentos/Graficacion-computacipnal/imagenes3D.py
+  223  ps aux | grep -E 'hyprpaper|mpvpaper|wbg|wallbash|wallust'\n
+  224  ps aux | grep -E 'wallpaper|background|bg|swww|mpv|mpvpaper|xwinwrap|wbg|wallbash|wallust' | grep -v grep\n
+  225  code
+  226  ^[[200~"wallbash.enabled": true,
+  227  "wallbash.themeMode": "auto", 
+  228  "wallbash.wallpaperPath": "/home/kike/Imágenes/Wallpapers"
+  229  ^[[200~which hyde
+  230  hyde --version\n
+  231  which hyde\n
+  232  sudo dnf install python3 python3-pip git -y\n
+  233  ls
+  234  git clone https://github.com/prasanthrangan/hyde.git\n
+  235  git clone https://github.com/HyDE-Project/HyDE.git\ncd HyDE\n
+  236  sudo dnf update 
+  237  ls
+  238  ls -l
+  239  ls -a
+  240  ls -la
+  241  cd Sistemas-operativos 
+  242  cd Documentos 
+  243  ls
+  244  cd Sistemas-operativos 
+  245  ls
+  246  mkdir Agosto25
+  247  ls
+  248  cd Agosto25
+  249  code veintiuno.txt
+  250  cat veintiuno.txt
+  251  code veintiuno.txt
+  252  ca
+  253  cat veintiuno.txt
+  254  cd ..
+  255  ls
+  256  mkdir Actividad-210825
+  257  ls
+  258  cd Actividad-210825
+  259  mkdir Carpeta-1
+  260  mkdir Carpeta-2
+  261  mkdir Carpeta-3
+  262  mkdir Carpeta-4
+  263  mkdir Carpeta-5
+  264  ls
+  265  cd Carpeta-1
+  266  nano Archivo-1
+  267  nano Archivo-2
+  268  cat Archivo-1
+  269  nano Archivo-1
+  270  cat Archivo-2
+  271  nano Archivo-1
+  272  cd ..
+  273  ls
+  274  cd Carpeta-2
+  275  nano Archivo-3
+  276  nano Archivo-4
+  277  cd ..
+  278  ls
+  279  cd Carpeta-3
+  280  nano Archivo-5
+  281  nano Archivo-6
+  282  cd ..
+  283  cd Carpeta-4
+  284  nano Archivo-7
+  285  nano Archivo-8
+  286  la
+  287  cd ..
+  288  cd Carpeta-5
+  289  nano Archivo-9
+  290  nano Archivo-10
+  291  cat Archivo-10
+  292  cd ..
+  293  pwd
+  294  git --version
+  295  python --version
+  296  git --config --list
+  297  ls
+  298  cd ..
+  299  ls
+  300  cd home
+  301  cd
+  302  ls
+  303  cd ..
+  304  ls
+  305  cd ..
+  306  ls
+  307  cd usr
+  308  ls
+  309  cd bin
+  310  ls
+  311  which git\n
+  312  wherels git
+  313  cd ..
+  314  ls
+  315  cd ..
+  316  cd home
+  317  wherels git
+  318  which git\n
+  319  ls
+  320  cd kike
+  321  which git\n
+  322  sudo dnf install git python3-pip python3-virtualenv -y\n
+  323  git clone https://github.com/HyDE-Project/HyDE.git\ncd HyDE\n
+  324  fastfech --version
+  325  ls
+  326  cd Documentos 
+  327  LS
+  328  ls
+  329  cd Sistemas-operativos 
+  330  ls
+  331  pip --version
+  332  sudo mkdir canny
+  333  mkdir canny
+  334  ls
+  335  cd canny
+  336  git config --global usar.name "xKikex16"
+  337  git config --global user.name "xKikex16"
+  338  git config --global user.email "eresendizh001@alumno.uaemex.mx"
+  339  git config --list --show-origin
+  340  git config --global --unset usar.name\n
+  341  git config --list --show-origin\n
+  342  code Canny.py
+  343  pip install opencv-python\n
+  344  ls
+  345  python3 Canny.py
+  346  nano Canny.py
+  347  python3 Canny.py
+  348  mv cartas.jpg /Sistemas-operativos
+  349  mv cartas.jpg Sistemas-operativos
+  350  ls
+  351  mv Sistemas-operativos cartas
+  352  ls
+  353  mv cartas.jpg Sistemas-operativos/
+  354  mv cartas.jpg Sistemas-operativos ./
+  355  sudo mv cartas.jpg Sistemas-operativos/
+  356  sudo mv cartas.jpg /Sistemas-operativos
+  357  ls
+  358  cd ..
+  359  ls
+  360  cd canny
+  361  ls
+  362  mv Sistemas-operativos cartas.jpg
+  363  ls
+  364  python3 Canny.py
+  365  git init 
+  366  ls
+  367  cd Documentos 
+  368  cd Sistemas-operativos 
+  369  cd canny
+  370  git add .
+  371  git commit -m "Subir codigo e imagen"
+  372  git branch -M main
+  373  git remote add origin https://github.com/xKikex16/SistemasOperativos25B.git
+  374  git push -u origin main
+  375  git config --list --show-origin\n
+  376  git remote add origin https://github.com/xKikex16/SistemasOperativos25B.git
+  377  git push -u origin main
+  378  ls
+  379  cd D
+  380  cd Documentos 
+  381  cd Sistemas-operativos 
+  382  cd c
+  383  cd canny
+  384  nano Canny.py
+  385  git commit -m "Comentario"
+  386  nano Canny.py
+  387  ls
+  388  git add Canny.py
+  389  git commit -m "commit de comentario"
+  390  git push -u origin main
+  391  nano Canny.py
+  392  git add Canny.py
+  393  git commit -m "commit de segundo comentario"
+  394  git push -u origin main
+  395  python3 practicao1.py
+  396  /usr/bin/python /home/kike/Documentos/Ciencia-datos/Practica02.py
+  397  pip install tkinter
+  398  /usr/bin/python /home/kike/Documentos/Ciencia-datos/Practica02.py
+  399  sudo dnf install -y python3-tkinter\n
+  400  /usr/bin/python /home/kike/Documentos/Ciencia-datos/Practica02.py
+  401  ls
+  402  unityhub\n
+  403  code
+  404  /usr/bin/python /home/kike/Documentos/Graficacion-computacipnal/perpendicularOrtogonal.py
+  405  cd Documentos 
+  406  cd Sistemas-operativos 
+  407  ls
+  408  cd canny
+  409  mkdir Asistencia
+  410  ls
+  411  git add Asistencia 
+  412  git commit -m "Carpeta de asistencia"
+  413  git add Asistencia
+  414  git commit -m "Carpeta de asistencia"
+  415  git add Asistencia
+  416  git commit -m "Carpeta de asistencia"
+  417  ls
+  418  cd Asistencia 
+  419  git add Asistencia
+  420  cd ..
+  421  ls
+  422  git add Asistencia
+  423  git commit -m "commit de segundo comentario"
+  424  git commit -m "Carpeta de asistencia"
+  425  git add Asistencia
+  426  ls
+  427  git add Asistencia
+  428  cd Asistencia 
+  429  git commit -m "Carpeta de asistencia"
+  430  cd ..
+  431  ls
+  432  git add Asistencia
+  433  cd Asistencia 
+  434  git add .
+  435  git commit -m "Carpeta de asistencia"
+  436  ls
+  437  cd ..
+  438  ls
+  439  git add Asistencia
+  440  git commit -m "Carpeta de asistencia"
+  441  ls
+  442  git add .
+  443  git commit -m "Carpeta de asistencia"
+  444  ls
+  445  cd Documentos 
+  446  cd Sistemas-operativos 
+  447  cd canny
+  448  ls
+  449  git add Asistencia
+  450  git commit -m "Carpeta de asistencia"
+  451  git push -u origin main
+  452  cd ..
+  453  ls
+  454  cd Imagenes
+  455  cd Imágenes
+  456  ls
+  457  cd Screenshots 
+  458  ls
+  459  ls -l
+  460  mv Screenshot_28-ago_15-47-10_5268.png
+  461  mv Screenshot_28-ago_15-47-10_5268.png 28-Agosto-2025.png
+  462  ls -l
+  463  mv 28-Agosto-2025.png Documentos/Sistemas-operativos/canny/Asistencia
+  464  mv 28-Agosto-2025.png /Documentos/Sistemas-operativos/canny/Asistencia
+  465  mv 28-Agosto-2025.png /Documentos/Sistemas-operativos/canny/Asistencia/
+  466  mv 28-Agosto-2025.png Documentos/Sistemas-operativos/canny/Asistencia/
+  467  mv 28-Agosto-2025.png /kike/Documentos/Sistemas-operativos/canny/Asistencia/
+  468  mv 28-Agosto-2025.png kike/Documentos/Sistemas-operativos/canny/Asistencia/
+  469  ls
+  470  cd ..
+  471  ls
+  472  cd Documentos 
+  473  cd Sistemas-operativos 
+  474  cd c
+  475  cd canny
+  476  ls
+  477  cd Asistencia 
+  478  ls
+  479  git add 28-Agosto-2025.png
+  480  git commit -m "Captuta de la carpeta Asistencia en git"
+  481  git push -u origin main
+  482  ls
+  483  git rm Screenshot_28-ago_15-44-49_26544.png
+  484  git commit -m "Eliminacion de la captura que puse para que dejara subir la carpeta vacia"
+  485  git push -u origin main
+  486  ls
+  487  sudo dnf update\n
+  488  dnf help
+  489  sudo dnf upgrade
+  490  sudo dnf upgrade -y 
+  491  top
+  492  sudo dnf install htop
+  493  sudo dnf install htop -y
+  494  htop
+  495  systemctl --user status\n
+  496  rpm -qa --last
+  497  rpm -qa --last | wc -l
+  498  rpm -qa --last > PkgInstallAgo25.txt
+  499  ls
+  500  htop
+  501  ls
+  502  cd Documentos 
+  503  ls
+  504  cd Sistemas-operativos 
+  505  ls
+  506  cd canny
+  507  ls
+  508  mkdir Tareas
+  509  ls
+  510  cd Tareas
+  511  sudo nano uno.txt
+  512  lkls
+  513  ls
+  514  cd ..
+  515  ls
+  516  git add Tareas
+  517  git commit -m "Carpeta de tareas"
+  518  git push -u origin main
+  519  ls
+  520  cd Tareas
+  521  ls
+  522  git add Paquetesinstalados.pdf
+  523  git add Paquetes.instalados.pdf
+  524  ls
+  525  git add Paquetes-instalados.pdf
+  526  git commit -m "Tarea de paquetes instalados"
+  527  git push -u origin main
+  528  ls
+  529  pwd
+  530  cd /..
+  531  pwd
+  532  ls
+  533  cd etc
+  534  ls
+  535  cd
+  536  cd /..
+  537  cd etc
+  538  ls
+  539  init 0
+  540  top
+  541  systemd --help\n
+  542  systemd --version\n
+  543  ls\n
+  544  cd /..
+  545  ls
+  546  sudo dnf install openssh-server -y
+  547  ssh --version
+  548  sudo systemctl start sshd
+  549  sudo systemctl start 
+  550  sudo systemctl status
+  551  sudo systemctl enable sshd
+  552  sudo systemctl status
+  553  systemctl list-unit-files --type service -all
+  554  ssh --version
+  555  ssh status
+  556  sudo systemctl disable sshd
+  557  systemctl list-unit-files --type service -all
+  558  sudo systemctl enable sshd
+  559  systemctl list-unit-files --type service -all
+  560  man systemctl
+  561  sudo systemctl | grep running 
+  562  sudo systemctl status ssh
+  563  systemctl list-unit-files --state=failed
+  564  sudo systemctl reboot ssh
+  565  sudo systemctl reboot 
+  566  cd /..
+  567  ls
+  568  cd Documentos 
+  569  cd Sistemas-operativos 
+  570  mkdir Agosto25
+  571  cd Documentos 
+  572  cd Sistemas-operativos 
+  573  cd Agosto25
+  574  mkdir Dir1
+  575  ls
+  576  mkdir Dir2 Dir3
+  577  ls -l
+  578  rmdir Dir3
+  579  ls
+  580  cd Dir1
+  581  touch archivo1.txt
+  582  ls
+  583  touch archivo2.txt archivo3.txt
+  584  ls -l
+  585  cat > leame.txt
+  586  ls -l
+  587  pwd
+  588  ls
+  589  cp archivo1.txt /home/kike/Documentos/Sistemas-operativos/Agosto25/Dir2
+  590  cd ..
+  591  cd Dir2
+  592  ls
+  593  rm archivo1.txt
+  594  ls
+  595  +++++++++++++++++--+++
+  596  cd ..
+  597  rm -r Dir3
+  598  rm -r Dir2
+  599  ls
+  600  cd Documentos 
+  601  cd Sistemas-operativos 
+  602  cd canny
+  603  ls
+  604  cd Asistencia 
+  605  ls
+  606  git add 29-Agosto-2025
+  607  git add 29-Agosto-2025.png
+  608  git commit -m "Asistencia 29 agosto 2025"
+  609  git push -u origin main
+  610  unityhub\n
+  611  sudo dnf install ./Unity-Editor-*.rpm\n
+  612  unityhub --version\n
+  613  unityhub -- --help
+  614  ls -lh Unity-Editor-*.rpm\n
+  615  unityhub -- --headless install --help\n
+  616  sudo dnf update -y\nsudo dnf install -y \\n  GConf2 libXScrnSaver libXrandr libXcursor libXi libXss \\n  mesa-libGL libglvnd-glx alsa-lib pulseaudio-libs \\n  libc6 compat-openssl11 openssl11 || true\n
+  617  df -hT\n
+  618  df -i\n
+  619  df -h /tmp\n
+  620  ls -ld ~/.config/UnityHub ~/.cache/UnityHub ~/.local/share/UnityHub 2>/dev/null\ndu -sh ~/.config/UnityHub ~/.cache/UnityHub ~/.local/share/UnityHub 2>/dev/null || true\n# busca carpetas grandes en tu home\ndu -sh ~/* 2>/dev/null | sort -h | tail -n 20\n
+  621  mkdir -p "$HOME/tmp_unity"\n
+  622  TMPDIR="$HOME/tmp_unity" unityhub\n# o para instalar headless (ejemplo con versión; cambia versión si quieres)\nTMPDIR="$HOME/tmp_unity" unityhub -- --headless install --version 2022.3.11f1\n
+  623  mkdir -p "$HOME/tmp_unity"\n
+  624  TMPDIR="$HOME/tmp_unity" unityhub\n# o para instalar headless (ejemplo con versión; cambia versión si quieres)\nTMPDIR="$HOME/tmp_unity" unityhub -- --headless install --version 2022.3.11f1\n
+  625  # limpia cache de UnityHub (revisa primero con du)\ndu -sh ~/.cache/UnityHub ~/.local/share/UnityHub 2>/dev/null || true\n\n# borrar descargas parciales (haz esto solo si no necesitas lo descargado)\nrm -rf ~/.cache/UnityHub/Downloads/* ~/.local/share/UnityHub/Downloads/* 2>/dev/null || true\n\n# limpiar DNF y logs (libera algo de espacio)\nsudo dnf clean all\nsudo journalctl --vacuum-size=500M\n
+  626  TMPDIR="$HOME/tmp_unity" unityhub\n# o para instalar headless (ejemplo con versión; cambia versión si quieres)\nTMPDIR="$HOME/tmp_unity" unityhub -- --headless install --version 2022.3.11f1\n
+  627  mkdir -p "$HOME/tmp_unity"\n
+  628  TMPDIR="$HOME/tmp_unity" unityhub\n# o para instalar headless (ejemplo con versión; cambia versión si quieres)\nTMPDIR="$HOME/tmp_unity" unityhub -- --headless install --version 2022.3.11f1\n
+  629  mkdir -p "$HOME/tmp_unity"\n
+  630  TMPDIR="$HOME/tmp_unity" unityhub\n# o para instalar headless (ejemplo con versión; cambia versión si quieres)\nTMPDIR="$HOME/tmp_unity" unityhub -- --headless install --version 2022.3.11f1\n
+  631  mkdir -p "$HOME/tmp_unity"\n
+  632  TMPDIR="$HOME/tmp_unity" unityhub\n# o para instalar headless (ejemplo con versión; cambia versión si quieres)\nTMPDIR="$HOME/tmp_unity" unityhub -- --headless install --version 6000.2.2f1\n
+  633  /usr/bin/python /home/kike/Documentos/Ciencia-datos/Practica02.py
+  634  pip install pandas
+  635  /usr/bin/python /home/kike/Documentos/Ciencia-datos/Practica02.py
+  636  pip install tkcalendar
+  637  /usr/bin/python /home/kike/Documentos/Ciencia-datos/Practica02.py
+  638  code
+  639  systemctl list-unit-files --type service -all
+  640  history
+  641  systemctl list-unit-files --type service --all
+  642  man systemctl
+  643  sudo systemctl | grep running 
+  644  sudo systemctl | grep static
+  645  sudo systemctl | grep statica
+  646  sudo systemctl | grep statics
+  647  sudo systemctl | grep static
+  648  sudo systemctl | grep generate
+  649  sudo systemctl | grep running 
+  650  sudo systemctl | grep static
+  651  sudo systemctl | grep generated
+  652  sudo systemctl | grep masked
+  653  sudo dnf update -y\nsudo dnf install -y \\n  GConf2 libXScrnSaver libXrandr libXcursor libXi libXss \\n  mesa-libGL libglvnd-glx alsa-lib pulseaudio-libs \\n  libc6 compat-openssl11 openssl11 || true\n
+  654  sudo dnf update -y
+  655  sudo dnf install openssh-server -y
+  656  sudo systemctl start ssh
+  657  ssh status
+  658  sudo systemctl enable ssh
+  659  sudo systemctl enable ssh.service
+  660  sudo systemctl start ssh.service
+  661  sudo systemctl status ssh
+  662  sudo systemctl stop ssh
+  663  sudo systemctt enable ssh
+  664  sudo systemctl enable ssh
+  665  sudo systemctl stop ssh
+  666  sudo systemctl status ssh
+  667  sudo systemctl | grep ssh
+  668  sudo systemctl status sshd
+  669  sudo systemctl start sshd
+  670  systemctl list-unit-files --state=failed
+  671  systemctl enable cgconfig.service
+  672  sudo systemctl enable cgconfig.service
+  673  cd ..
+  674  ls
+  675  cd ..
+  676  ls
+  677  cd etc
+  678  l
+  679  ls
+  680  cd ..
+  681  sudo dnf install libcgroup
+  682  ls
+  683  cd etc
+  684  ls
+  685  sudo dnf remove libcgroup
+  686  sudo yum install net-tools
+  687  netstat -v
+  688  netstat -nr
+  689  netstat -ai
+  690  netstat -ant
+  691  netstat -pnltu
+  692  ls
+  693  cd d
+  694  cd Documentos 
+  695  ls 
+  696  cd Sistemas-operativos 
+  697  ls
+  698  cd canny
+  699  ls
+  700  mkdir TrabajoClase
+  701  ls
+  702  cd ..
+  703  ls
+  704  cd ..
+  705  ls
+  706  pwd
+  707  cd etc
+  708  ls
+  709  cat passwd
+  710  cat shadow
+  711  sudo cat shadow 
+  712  cat shadow group
+  713  cd ..
+  714  ls
+  715  cat /etc/shadow
+  716  id kike
+  717  sudo dnf install tldr
+  718  tldr ls
+  719  git add 04-Septiembre-2025.png
+  720  cd Documentos 
+  721  cd Sistemas-operativos 
+  722  cd canny
+  723  cd Asistencia 
+  724  ls
+  725  git add 04-Septiembre-2025.png
+  726  git commit -m "Asistencia 04 septiembre 2025"
+  727  git push -u origin main
+  728  cd ..
+  729  ls
+  730  git add TrabajoClase
+  731  git commit -m "Carpeta de trabajos en clase"
+  732  git push -u origin main
+  733  sudo dnf install fastfetch -y
+  734  fastfetch
+  735  fastfetch --list-logos
+  736  fastfetch --logo laki
+  737  fastfetch 
+  738  fastfetch --print-logos
+  739  fastfetch 
+  740  fastfetch --list-logos
+  741  fastfetch --logo kali
+  742  ls
+  743  cd Documentos 
+  744  ls
+  745  cd Sistemas-operativos 
+  746  ls
+  747  cd canny
+  748  ls
+  749  cd Asistencia 
+  750  ls
+  751  git add 05-Septiembre-2025.png
+  752  git commit -m "Asistencia 05 septiembre 2025"
+  753  git push -u origin main
+  754  ping 8.8.8.8
+  755  cd Documentos 
+  756  cd Sistemas-operativos 
+  757  cd canny
+  758  ls
+  759  cd TrabajoClase
+  760  cd
+  761  ls
+  762  cd Documentos 
+  763  cd Sistemas-operativos 
+  764  cd c
+  765  cd canny
+  766  ls
+  767  cd TrabajoClase
+  768  ls
+  769  mkdir TC-05-septiembre-2025
+  770  cd ..
+  771  ls
+  772  cd Asistencia 
+  773  ls
+  774  cd ..
+  775  cd TrabajoClase
+  776  cd
+  777  cd Documentos 
+  778  cd Sistemas-operativos 
+  779  cd canny
+  780  cd TrabajoClase
+  781  ls
+  782  git add TC-05-Septiembre-2025
+  783  git commit -m "Trabajo en clase 05 septiembre 2025"
+  784  git push -u origin main
+  785  ls
+  786  cd TC-05-Septiembre-2025
+  787  ls
+  788  fastfetch --list-logos
+  789  fastfetch --logo parrot
+  790  fastfetch --logo garuda
+  791  fastfetch --logo garudaDragon
+  792  fastfetch --logo arch
+  793  cat /etc/shadow
+  794  ping 8.8.8.8
+  795  sudo dnf update && upgrade -y\nsudo dnf install -y openssl openssl-libs GConf2 openssl11\n
+  796  sudo dnf upgrade -y
+  797  code
+  798  /usr/bin/python /home/kike/Documentos/Graficacion-computacipnal/orientacionEn3Puntos
+  799  code
+  800  /usr/bin/python /home/kike/Documentos/Graficacion-computacipnal/orientacionEn3Puntos
+  801  colors
+  802  colors ls
+  803  code
+  804  /bin/python "/home/kike/Documentos/Ciencia-datos/Practica03 (copia 1).py"
+  805  pip install streamlit
+  806  pip install plotly
+  807  /bin/python "/home/kike/Documentos/Ciencia-datos/Practica03 (copia 1).py"
+  808  pip install matplotlib
+  809  /bin/python "/home/kike/Documentos/Ciencia-datos/Practica03 (copia 1).py"
+  810  pip install seaborn
+  811  /bin/python "/home/kike/Documentos/Ciencia-datos/Practica03 (copia 1).py"
+  812  streamlit run P/bin/python "/home/kike/Documentos/Ciencia-datos/Practica03 (copia 1).py"arctica03 (copia 1).py
+  813  streamlit run Practica003.py
+  814  stream run Practica003.py
+  815  streamlit run Practica003.py
+  816  /bin/python /home/kike/Documentos/Ciencia-datos/Practica003.py
+  817  Streamlit run Practica003.py
+  818  pip install streamlit
+  819  streamlit run Practica003.py
+  820  pip install streamlit
+  821  /bin/python /home/kike/Documentos/Ciencia-datos/holaa.py
+  822  streamlit run holaa.py
+  823  streamlit run Practica003.py
+  824  streamlit --version\n
+  825  ~/.local/bin/streamlit run Practica003.py\n
+  826  /bin/python /home/kike/Documentos/Ciencia-datos/Practica003.py
+  827  ls ~/.local/bin/streamlit\n
+  828  nano ~/.zshrc\n
+  829  source ~/.zshrc\n
+  830  streamlit --version\nstreamlit hello\n
+  831  streamlit run Practica003.py
+  832  ls ~/.local/bin/streamlit\n
+  833  ls 
+  834  cd Documentos 
+  835  ls
+  836  cd Ciencia-datos
+  837  ls
+  838  streamlit run Practica003.py
+  839  streamlit run holaa.py
+  840  cd Documentos 
+  841  cd Ciencia-datos
+  842  streamlit run holaa.py
+  843  pip install statsmodels\n
+  844  streamlit run holaa.py
+  845  sudo dnf install gcc gfortran python3-devel\n
+  846  code
+  847  /bin/python /home/kike/Documentos/Ciencia-datos/Practica003.py
+  848  streamlit run Practica003.py
+  849  # pip (suele funcionar en la mayoría de setups)\npip install openpyxl\n\n
+  850  /bin/python /home/kike/Documentos/Ciencia-datos/Practica003.py
+  851  streamlit run Practica003.py
+  852  pip install -U streamlit
+  853  /bin/python /home/kike/Documentos/Ciencia-datos/Practica003.py
+  854  streamlit run Practica003.py
+  855  pip3 install -U streamlit
+  856  /bin/python /home/kike/Documentos/Ciencia-datos/Practica003.py
+  857  streamlit run Practica003.py
+  858  python -c "import streamlit as st; print('streamlit', st.__version__); print('data_editor', hasattr(st,'data_editor')); print('experimental_data_editor', hasattr(st,'experimental_data_editor'))"\n
+  859  /bin/python /home/kike/Documentos/Ciencia-datos/Practica003.py
+  860  streamlit run Practica003.py
+  861  /bin/python /home/kike/Documentos/Ciencia-datos/Practica003.py
+  862  streamlit run Practica003.py
+  863  /bin/python /home/kike/Documentos/Ciencia-datos/Practica003.py
+  864  streamlit run Practica003.py
+  865  /bin/python /home/kike/Documentos/Ciencia-datos/Practica003.py
+  866  streamlit run Practica003.py
+  867  /bin/python /home/kike/Documentos/Ciencia-datos/Practica003.py
+  868  streamlit run Practica003.py
+  869  /bin/python /home/kike/Documentos/Ciencia-datos/Practica003.py
+  870  streamlit run Practica003.py
+  871  /bin/python /home/kike/Documentos/Ciencia-datos/holaa.py
+  872  /bin/python /home/kike/Documentos/Ciencia-datos/Practica03Streamlit.py
+  873  streamlit run Practica003Streamlit.py
+  874  streamlit run Practica03Streamlit.py
+  875  /bin/python /home/kike/Documentos/Ciencia-datos/holaa.py
+  876  streamlit run holaa.py
+  877  /bin/python /home/kike/Documentos/Ciencia-datos/holaa.py
+  878  streamlit run holaa.py
+  879  /bin/python /home/kike/Documentos/Ciencia-datos/Practica03Streamlit.py
+  880  streamlit run Practica03Streamlit.py
+  881  /bin/python /home/kike/Documentos/Ciencia-datos/Practica03Streamlit.py
+  882  streamlit run Practica03Streamlit.py
+  883  /bin/python /home/kike/Documentos/Ciencia-datos/Practica03Streamlit.py
+  884  streamlit run Practica03Streamlit.py
+  885  /bin/python /home/kike/Documentos/Ciencia-datos/Practica03Streamlit.py
+  886  streamlit run Practica03Streamlit.py
+  887  /bin/python /home/kike/Documentos/Ciencia-datos/Practica03Streamlit.py
+  888  streamlit run Practica03Streamlit.py
+  889  /bin/python /home/kike/Documentos/Ciencia-datos/Practica03Streamlit.py
+  890  streamlit run Practica03Streamlit.py
+  891  /bin/python /home/kike/Documentos/Ciencia-datos/Practica03Streamlit.py
+  892  streamlit run Practica03Streamlit.py
+  893  /bin/python /home/kike/Documentos/Ciencia-datos/Practica03Streamlit.py
+  894  streamlit run Practica03Streamlit.py
+  895  sudo cat shadow 
+  896  sudo cat /etc/shadow 
+  897  sudo cat /etc/group 
+  898  sudo useradd -u 1009 -d /home/monti -m -s /bin/bash antony
+  899  id antony
+  900  id antony kike
+  901  sudo useradd -u 1009 -d /home/hazem -m -s /bin/bash -e 2025-09-12 -f 2 antony\n
+  902  sudo useradd -u 1010 -d /home/kike2 -m -s /bin/bash -e 2025-09-12 -f 2 kike2\n
+  903  sudo chage -l kike2\n\n
+  904  sudo userdel -r kike2\n
+  905  id kike2
+  906  sudo useradd -u 1010 -d /home/kike2 -m -s /bin/bash -e 2025-09-12 -f 2025-09-13 kike2\n
+  907  sudo useradd -u 1010 -d /home/kike2 -m -s /bin/bash -e 2025-09-12 -f 2 kike2\n
+  908  sudo chage -l kike2\n\n
+  909  sudo chage -E 2025-09-12
+  910  sudo userdel -r kike2\n
+  911  sudo useradd -u 1010 -d /home/kike2 -m -s /bin/bash -e 2025-09-12 -f 2 kike2\n
+  912  sudo chage -E 2025-09-12 kike2
+  913  sudo chage -l kike2\n\n
+  914  sudo passwd -i 10 kike2\n
+  915  sudo chage -l kike2\n\n
+  916  cd Documentos\n\n
+  917  ls
+  918  cd Sistemas-operativos 
+  919  cd canny
+  920  cd Asistencia 
+  921  ls
+  922  git add 11-Septiembre-2025
+  923  git add 11-Septiembre-2025.png
+  924  git commit -m "Asistencia 11 septiembre 2025"
+  925  git push -u origin main
+  926  git add 11-Septiembre-2025.png
+  927  git commit -m "Asistencia 11 septiembre 2025"
+  928  ls
+  929  git add 11-Septiembre-2025.png
+  930  git commit -m "Asistencia 11 septiembre 2025"
+  931  cd Documentos\n\n
+  932  ls\n
+  933  cd Sistemas-operativos 
+  934  ls
+  935  cd canny
+  936  cd Asistencia 
+  937  git add 11-Septiembre-2025.png
+  938  git commit -m "Asistencia 11 septiembre 2025"
+  939  ls
+  940  cd Documentos\n\n
+  941  cd Sistemas-operativos 
+  942  cd canny
+  943  cd Asistencia 
+  944  ls
+  945  git add 11-Septiembre-2025.png
+  946  git commit -m "Asistencia 11 septiembre 2025"
+  947  cd Documentos\n\n
+  948  cd Sistemas-operativos 
+  949  cd canny
+  950  cd Asistencia 
+  951  git add 11-Septiembre-2025.png
+  952  git commit -m "Asistencia 11 septiembre 2025"
+  953  git push -u origin main
+  954  sudo cat /etc/group\n
+  955  su kike2
+  956  sudo useradd --force-badname -m -s /bin/bash Alvare\n
+  957  sudo useradd --force-badname -m -s /bin/bash Alvarez\n
+  958  history
+  959  tldr useradd
+  960  /bin/python /home/kike/Documentos/Ciencia-datos/Practica03Streamlit.py
+  961  streamlit run Practica03Streamlit.py
+  962  /bin/python /home/kike/Documentos/Ciencia-datos/Practica03Streamlit.py
+  963  streamlit run Practica03Streamlit.py
+  964  /bin/python /home/kike/Documentos/Ciencia-datos/Practica03Streamlit.py
+  965  /usr/bin/python /home/kike/Documentos/Ciencia-datos/Practica03Streamlit.py
+  966  streamlit run Practica03Streamlit.py
+  967  /usr/bin/python /home/kike/Documentos/Ciencia-datos/Practica05.py
+  968  pip install imblearn
+  969  /usr/bin/python /home/kike/Documentos/Ciencia-datos/Practica05.py
+  970  streamlit run Practica03Streamlit.py
+  971  /usr/bin/python /home/kike/Documentos/Ciencia-datos/Practica05.py
+  972  streamlit run Practica05.py
+  973  /usr/bin/python /home/kike/Documentos/Ciencia-datos/Practica05.py
+  974  streamlit run Practica05.py
+  975  /usr/bin/python /home/kike/Documentos/Ciencia-datos/Practica05.py
+  976  streamlit run Practica05.py
+  977  /usr/bin/python /home/kike/Documentos/Ciencia-datos/Practica05.py
+  978  streamlit run Practica05.py
+  979  /usr/bin/python /home/kike/Documentos/Ciencia-datos/Practica05.py
+  980  streamlit run Practica05.py
+  981  /usr/bin/python /home/kike/Documentos/Ciencia-datos/Practica05.py
+  982  streamlit run Practica05.py
+  983  /usr/bin/python /home/kike/Documentos/Ciencia-datos/Practica05.py
+  984  streamlit run Practica05.py
+  985  /usr/bin/python /home/kike/Documentos/Ciencia-datos/Practica05.py
+  986  streamlit run Practica05.py
+  987  /usr/bin/python /home/kike/Documentos/Ciencia-datos/Practica05.py
+  988  streamlit run Practica05.py
+  989  /usr/bin/python /home/kike/Documentos/Ciencia-datos/Practica05.py
+  990  streamlit run Practica05.py
+  991  /usr/bin/python /home/kike/Documentos/Ciencia-datos/Practica05.py
+  992  streamlit run Practica05.py
+  993  /usr/bin/python /home/kike/Documentos/Ciencia-datos/Practica05.py
+  994  streamlit run Practica05.py
+  995  /usr/bin/python /home/kike/Documentos/Ciencia-datos/Practica05.py
+  996  streamlit run Practica05.py
+  997  /usr/bin/python /home/kike/Documentos/Ciencia-datos/Practica05.py
+  998  streamlit run Practica05.py
+  999  /usr/bin/python /home/kike/Documentos/Ciencia-datos/Practica05.py
+ 1000  streamlit run Practica05.py
+ 1001  /usr/bin/python /home/kike/Documentos/Ciencia-datos/Practica05.py
+ 1002  streamlit run Practica05.py
+ 1003  /usr/bin/python /home/kike/Documentos/Ciencia-datos/Practica05.py
+ 1004  streamlit run Practica05.py
+ 1005  ls
+ 1006  sudo chage -l kike2\n\n
+ 1007  id
+ 1008  sudo adduser --allow-bad-name Aby
+ 1009  sudo adduser --allow-bad-names Aby
+ 1010  sudo adduser --badname Aby
+ 1011  id
+ 1012  id Aby
+ 1013  sudo cat /etc/group\n
+ 1014  su Aby
+ 1015  su Aby 
+ 1016  exit\n
+ 1017  su Aby 
+ 1018  sudo cat /etc/sudoers\n
+ 1019  cd ..
+ 1020  ls
+ 1021  cd ..
+ 1022  ls
+ 1023  cd etc
+ 1024  sudo cat /etc/group\n
+ 1025  sudo su
+ 1026  su Aby 
+ 1027  sudo su Aby
+ 1028  ls 
+ 1029  sudo chage -l Aby\n\n
+ 1030  sudo passwd Aby\n
+ 1031  su Aby 
+ 1032  sudo adduser --allow-bad-names Aby
+ 1033  sudo cat /etc/group\n
+ 1034  sudo -k
+ 1035  sudo cat /etc/group\n
+ 1036  sudo dnf upgrade -y
+ 1037  sudo visudo
+ 1038  sudo cat /etc/group\n
+ 1039  sudo -k
+ 1040  sudo cat /etc/group\n
+ 1041  sudo visudo
+ 1042  sudo userdel -r Aby\n
+ 1043  sudo groupdel Aby\n
+ 1044  sudo cat /etc/group\n
+ 1045  sudo gpasswd -d Aby Adm\n
+ 1046  sudo gpasswd -d Aby adm\n
+ 1047  sudo visudo
+ 1048  cd 
+ 1049  ls
+ 1050  cd Documentos\n\n
+ 1051  cd Sistemas-operativos 
+ 1052  cd canny
+ 1053  ls
+ 1054  cd Asistencia 
+ 1055  git add 18-Septiembre-2025.png
+ 1056  git commit -m "Asistencia 18 septiembre 2025"
+ 1057  git push -u origin main
+ 1058  sudo adduser USER1
+ 1059  sudo userdel -r USER1\n
+ 1060  sudo adduser USER1
+ 1061  sudo passwd USER1\n
+ 1062  sudo chfn USER1
+ 1063  sudo chage -l USER1
+ 1064  cd Documentos\n\n
+ 1065  cd Sistemas-operativos 
+ 1066  cd canny
+ 1067  cd TrabajoClase
+ 1068  ls
+ 1069  git add TC-18-Septiembre-2025.png
+ 1070  git commit -m "Trabajo en clase 18 septiembre 2025"
+ 1071  git push -u origin main
+ 1072  /bin/python "/home/kike/Documentos/Ciencia-datos/Practica05(2).py"
+ 1073  streamlit run Practica05(2).py
+ 1074  /bin/python /home/kike/Documentos/Ciencia-datos/Practica005.py
+ 1075  streamlit run Practica005.py
+ 1076  su USUARIO1
+ 1077  su USER1
+ 1078  exit
+ 1079  su USER1
+ 1080  ufw --version
+ 1081  sudo dnf install ufw
+ 1082  exit
+ 1083  cd Documentos\n\n
+ 1084  cd Sistemas-operativos 
+ 1085  cd canny
+ 1086  cd Tareas
+ 1087  ls
+ 1088  git add Tarea-19-Septiembre-2025.png
+ 1089  git commit -m "Tarea 19 de septiembre 2025"
+ 1090  git push -u origin main
+ 1091  sudo ufw enable
+ 1092  sudo ufw status
+ 1093  sudo ufw app list
+ 1094  sudo nano /etc/default/ufw
+ 1095  sudo ufw default deny incoming
+ 1096  sudo ufw default allow outgoing
+ 1097  sudo ufw allow ssh
+ 1098  sudo ufw status 
+ 1099  cd /etc
+ 1100  ls
+ 1101  sudo cat /services
+ 1102  sudo cat services
+ 1103  cd /..
+ 1104  ls
+ 1105  sudo ufw allow 22
+ 1106  sudo ufw allow 2222
+ 1107  sudo ufw status 
+ 1108  sudo ufw disable 
+ 1109  ufw status
+ 1110  sudo ufw status
+ 1111  sudo ufw enable
+ 1112  sudo ufw status
+ 1113  sudo ufw allow http
+ 1114  sudo ufw allow 80
+ 1115  sudo ufw allow 443
+ 1116  sudo ufw allow HTTPS
+ 1117  sudo ufw allow https
+ 1118  sudo ufw status
+ 1119  sudo ufw allow 6000:6007/tcp
+ 1120  sudo ufw allow 6000:6007/udp
+ 1121  sudo ufw status
+ 1122  ping www.uaemex.mx
+ 1123  ping www.youtube.com
+ 1124  sudo ufw allow from 192.178.56.206
+ 1125  sudo ufw allow from 192.178.56.206 to eny port 22
+ 1126  sudo ufw allow from 192.178.56.206 to any port 22
+ 1127  sudo ufw status 
+ 1128  sudo ufw allow from 192.178.56.206/31
+ 1129  sudo ufw status 
+ 1130  sudo ufw allow from 192.178.56.206/24
+ 1131  sudo ufw status 
+ 1132  sudo ufw allow from 192.178.56.206/30 to any port 22
+ 1133  sudo ufw status 
+ 1134  ip addr 
+ 1135  sudo ufw allow in on eth0 to any port 80
+ 1136  sudo ufw status 
+ 1137  sudo dnf install mysql 
+ 1138  mysql --version
+ 1139  sudo ufw allow in on eth1 to any port 3306
+ 1140  sudo ufw status 
+ 1141  sudo ufw deny http
+ 1142  sudo ufw status 
+ 1143  sudo ufw status numbered
+ 1144  sudo ufw delete 4
+ 1145  sudo ufw status numbered
+ 1146  sudo ufw delete allow http
+ 1147  sudo ufw delete deny http
+ 1148  sudo ufw status numbered
+ 1149  sudo ufw status verbose
+ 1150  cd Documentos\n\n
+ 1151  cd Sistemas-operativos 
+ 1152  cd canny
+ 1153  cd Asistencia 
+ 1154  ls
+ 1155  git add 19-Septiembre-2025.png
+ 1156  git commit -m "Asistencia 19 de septiembre 2025"
+ 1157  git p0
+ 1158  git push -u origin main
+ 1159  sudo ufw reset
+ 1160  sudo ufw status 
+ 1161  sudo ufw enable
+ 1162  sudo dnf install pornito 
+ 1163  sudo passwd kike
+ 1164  sudo systemctl enable ssh
+ 1165  sudo systemctl enable sshd
+ 1166  sudo passwd kike
+ 1167  su 
+ 1168  sudo ufw status 
+ 1169  sudo systemctl enable sshd
+ 1170  sudo ufw app list
+ 1171  sudo dnf update -y
+ 1172  sudo iptables -nl
+ 1173  sudo iptables -nL
+ 1174  iptables -F
+ 1175  sudo iptables -F
+ 1176  sudo iptables -P INPUT DROP
+ 1177  sudo iptables -L -v
+ 1178  ping 8.8.8.8
+ 1179  sudo ufw allow OpenSSH\n
+ 1180  sudo ufw allow sshd\n
+ 1181  sudo ufw default deny incoming
+ 1182  sudo ufw default allow outgoing
+ 1183  sudo ufw allow sshd\n
+ 1184  sudo ufw allow ssh\n
+ 1185  sudo ufw allow 222/tcp\n
+ 1186  sudo ufw allow http\nsudo ufw allow https\n
+ 1187  sudo ufw status verbose\n
+ 1188  sudo ufw reset
+ 1189  sudo ufw allow sshd\n
+ 1190  sudo ufw allow ssh\n
+ 1191  sudo ufw allow 222/tcp\n\n
+ 1192  sudo ufw allow http
+ 1193  sudo ufw allow https
+ 1194  sudo ufw status verbose\n
+ 1195  sudo ufw reset
+ 1196  sudo ufw default deny incoming
+ 1197  sudo ufw default allow outgoing
+ 1198  sudo ufw allow ssh\n
+ 1199  sudo ufw status verbose\n
+ 1200  sudo ufw allow 222/tcp
+ 1201  sudo ufw status verbose}\n
+ 1202  sudo ufw status verbose\n
+ 1203  sudo ufw enable \n
+ 1204  sudo ufw status verbose\n
+ 1205  sudo ufw reset
+ 1206  sudo ufw enable 
+ 1207  sudo ufw allow ssh\n
+ 1208  sudo ufw status verbose\n
+ 1209  sudo ufw allow 222/tcp\n\n
+ 1210  sudo ufw allow http
+ 1211  sudo ufw allow https
+ 1212  sudo ufw status verbose\n
+ 1213  cd Documentos\n\n
+ 1214  cd Sistemas-operativos 
+ 1215  cd canny
+ 1216  cd Tareas
+ 1217  ls 
+ 1218  git add Tarea-25-Septiembre-2025.png
+ 1219  git commit -m "Tarea 25 de septiembre 2025"
+ 1220  git push -u origin main
+ 1221  ls
+ 1222  git add Tarea-25-Septiembre-2025.png
+ 1223  git commit -m "Tarea 25 de septiembre 2025"
+ 1224  git push -u origin main
+ 1225  sudo dnf update -y
+ 1226  sudo dnf install openssh-server -y
+ 1227  sudo netstat -tlpn
+ 1228  cd /etc/ssh
+ 1229  ls
+ 1230  sudo nano sshd_config
+ 1231  sudo cp sshd_config{,.bck}
+ 1232  ls
+ 1233  sudo cp sshd_config{,.bak}
+ 1234  ls
+ 1235  sudo nano sshd_config
+ 1236  cd ..
+ 1237  sudo systemctl start sshd
+ 1238  sudo systemctl start ssh
+ 1239  sudo systemctl start sshd
+ 1240  sudo systemctl status sshd
+ 1241  sudo systemctl restart ssh
+ 1242  sudo systemctl restart sshd
+ 1243  systemd --version\n
+ 1244  sudo dnf install putty
+ 1245  putty
+ 1246  hostname -I
+ 1247  putty
+ 1248  ifconfig
+ 1249  putty
+ 1250  ls -l
+ 1251  ls 
+ 1252  pwd 
+ 1253  exit
+ 1254  git clone --depth=1 https://github.com/JaKooLit/Fedora-Hyprland.git ~/Fedora-Hyprland
+ 1255  cd ~/Fedora-Hyprland
+ 1256  chmod +x install.sh
+ 1257  ./install.sh
+ 1258  cd
+ 1259  ls
+ 1260  cd ..
+ 1261  ls
+ 1262  ls -l
+ 1263  sh <(curl -L https://raw.githubusercontent.com/JaKooLit/Fedora-Hyprland/main/auto-install.sh)
+ 1264  ls
+ 1265  ls -la
+ 1266  cd ..
+ 1267  ls -la
+ 1268  cd ..
+ 1269  ls -la
+ 1270  cd /home/kike
+ 1271  cd /home/kike/.config
+ 1272  ls
+ 1273  ls -la
+ 1274  cd /home/kike/.config/UserConfigs/UserSettings.conf
+ 1275  cd /home/kike/.config/UserConfigs
+ 1276  sudo cat /home/kike/.config/UserConfigs/UserSettings.conf
+ 1277  sudo cat /home/kike/.config/hypr/UserConfigs/UserSettings.conf
+ 1278  sudo code /home/kike/.config/hypr/UserConfigs/UserSettings.conf
+ 1279  sudo nano /home/kike/.config/hypr/UserConfigs/UserSettings.conf
+ 1280  sudo code4 /home/kike/.config/hypr/UserConfigs/UserSettings.conf
+ 1281  sudo code /home/kike/.config/hypr/UserConfigs/UserSettings.conf
+ 1282  sudo nano /home/kike/.config/hypr/UserConfigs/UserSettings.conf
+ 1283  sudo nano /home/kike/.config/hypr/hyprland.conf
+ 1284  sudo nano /home/kike/.config/hypr/UserConfigs/UserSettings.conf
+ 1285  sudo nano /home/kike/.config/hypr/hyprland.conf
+ 1286  tldr user
+ 1287  tldr useradd
+ 1288  tldr groupadd
+ 1289  history | grep useradd
+ 1290  sudo adduser --badname Aby
+ 1291  id Aby
+ 1292  sudo chfn USER1
+ 1293  cat archivo1.txt archivo2.txt > salida.txt 
+ 1294  cat archivo2.txt >> salida.txt 
+ 1295  wc -l -w -c salida.txt
+ 1296  tldr groupadd
+ 1297  sudo nano /home/kike/.config/hypr/UserConfigs/UserSettings.conf
+ 1298  tldr useradd
+ 1299  history | grep grep
+ 1300  tldr usermod
+ 1301  tldr groupmod
+ 1302  tldr groumod
+ 1303  tldr grupmod
+ 1304  tldr group
+ 1305  hostname -I
+ 1306  ipconfig
+ 1307  ip addr 
+ 1308  sudo ufw default allow outgoing
+ 1309  fastfetch
+ 1310  fastfetch --logo arch
+ 1311  fastfetch --logo kali
+ 1312  history 
+ 1313  history | grep 
+ 1314  tldr users
+ 1315  tldr id
+ 1316  id usuario
+ 1317  tldr user
+ 1318  id user
+ 1319  history | grep group
+ 1320  sudo cat /etc/group\n
+ 1321  cd Documentos\n\n
+ 1322  cd Sistemas-operativos 
+ 1323  cd canny
+ 1324  ls
+ 1325  mkdir Examen1P
+ 1326  cd Examen1P
+ 1327  nano archivo.txt 
+ 1328  cd ..
+ 1329  git add Examen1P
+ 1330  git commit -m "Carpeta del examen del primer parcial"
+ 1331  git push -u origin main
+ 1332  git init 
+ 1333  history | grep main
+ 1334  git branch -M main
+ 1335  git add Examen1P
+ 1336  git commit -m "Carpeta del examen del primer parcial"
+ 1337  git push -u origin main
+ 1338  sudo git push -u origin main
+ 1339  sudo userdel -r USER1\n
+ 1340  sudo userdel -r Aby\n
+ 1341  sudo userdel -r kike2\n
+ 1342  cat /etc/group
+ 1343  sudo userdel -r antony
+ 1344  sudo cat /etc/group\n
+ 1345  sudo groupadd TeamScrum
+ 1346  cat /etc/group
+ 1347  sudo adduser --badname Carolina 
+ 1348  sudo passwd Carolina
+ 1349  sudo chfn Carolina
+ 1350  sudo adduser A
+ 1351  sudo useradd b
+ 1352  sudo chfn b
+ 1353  sudo usermod -l Karla Carolina 
+ 1354  cat /etc/group
+ 1355  sudo usermod -l Carolina Karla
+ 1356  sudo cat /etc/group\n
+ 1357  sudo usermod -l karla Carolina 
+ 1358  sudo cat /etc/group\n
+ 1359  sudo userdel -r A
+ 1360  sudo userdel -r b
+ 1361  sudo cat /etc/group\n
+ 1362  sudo usermod -aG TeamScrum karla 
+ 1363  sudo cat /etc/group\n
+ 1364  sudo usermod karla Karla
+ 1365  sudo usermod -l karla Karla
+ 1366  sudo usermod -l Karla arla
+ 1367  sudo usermod -l Karla karla
+ 1368  sudo cat /etc/group\n
+ 1369  sudo chage -l Karla
+ 1370  sudo passwd -e Karla \n
+ 1371  sudo chage -E 2025-09-26 Karla
+ 1372  sudo passwd -E 2025-09-26 Karla\n
+ 1373  sudo chage -l Karla
+ 1374  sudo cat /etc/group\n
+ 1375  sudo chage -l Karla
+ 1376  sudo passwd Karla
+ 1377  sudo cat /etc/group\n
+ 1378  sudo chage -l Karla
+ 1379  sudo passwd -E 2025-09-26 Karla
+ 1380  sudo cat /etc/group\n
+ 1381  sudo chage -l Karla
+ 1382  sudo chage -E 2025-09-26 Karla
+ 1383  sudo passwd -e Karla \n
+ 1384  sudo chage -l Karla
+ 1385  sudo passwd Karla \n
+ 1386  su Karla 
+ 1387  sudo cat /etc/group\n
+ 1388  sudo passwd Karla \n
+ 1389  sudo chage -l Karla
+ 1390  sudo passwd -e Karla \n
+ 1391  sudo chage -E 2025-09-27 Karla
+ 1392  sudo passwd Karla \n
+ 1393  su Karla
+ 1394  sudo - Karla
+ 1395  su - Karla
+ 1396  hostname -I
+ 1397  sudo usermod -aG wheel Karla 
+ 1398  su Karla
+ 1399  hostname -I
+ 1400  putty
+ 1401  cd ..
+ 1402  ls
+ 1403  cd ..
+ 1404  ls
+ 1405  cd root
+ 1406  sudo cd root
+ 1407  ls
+ 1408  cd ..
+ 1409  ls
+ 1410  sudo ufw status verbose\n
+ 1411  ufw enable\n
+ 1412  sudo ufw enable
+ 1413  sudo ufw status verbose\n
+ 1414  sudo ufw reset
+ 1415  sudo dnf install xampp
+ 1416  cd Descargas
+ 1417  chmod +x xampp-linux-*-installer.run
+ 1418  sudo ./xampp-linux-*-installer.run
+ 1419  xampp
+ 1420  sudo dnf -y install wget libnsl libxcrypt-compat
+ 1421  sudo /opt/lampp/lampp start\n
+ 1422  sudo /opt/lampp/manager-linux-x64.run\n
+ 1423  sudo chown -R $(whoami):$(whoami) /opt/lampp/htdocs\n
+ 1424  /sbin/python /home/kike/Documentos/Ciencia-datos/Practica0005.py
+ 1425  streamlit run Practica0005.py
+ 1426  /sbin/python /home/kike/Documentos/Ciencia-datos/Practica005.py
+ 1427  streamlit run Practica005.py
+ 1428  streamlit 
+ 1429  pip install streamlit
+ 1430  streamlit
+ 1431  streamlit 
+ 1432  /sbin/python /home/kike/Documentos/Ciencia-datos/Practica005.py
+ 1433  streamlit 
+ 1434  /sbin/python /home/kike/Documentos/Ciencia-datos/Practica005.py
+ 1435  streamlit run Practica005.py
+ 1436  pip install streamlit
+ 1437  streamlit
+ 1438  streamlit run Practica005.py
+ 1439  /sbin/python /home/kike/Documentos/Ciencia-datos/Practica005.py
+ 1440  pip install streamlit
+ 1441  streamlit hello
+ 1442  python --
+ 1443  python --version
+ 1444  /sbin/python /home/kike/Documentos/Ciencia-datos/Practica005.py
+ 1445  streamlit hello
+ 1446  pip install streamlit\n
+ 1447  streamlit --version\n
+ 1448  pip show streamlit\n
+ 1449  python -m venv venv\n
+ 1450  streamlit --version\n
+ 1451  source venv/bin/activate\n
+ 1452  streamlit --version\n
+ 1453  /sbin/python /home/kike/Documentos/Ciencia-datos/Practica005.py
+ 1454  python -m venv venv\n
+ 1455  source venv/bin/activate\n
+ 1456  streamlit --version\n
+ 1457  streamlit run Practica005.py
+ 1458  streamlit run Practica0005.py
+ 1459  source /home/kike/Documentos/Ciencia-datos/venv/bin/activate
+ 1460  /home/kike/Documentos/Ciencia-datos/venv/bin/python /home/kike/Documentos/Ciencia-datos/Practica005.py
+ 1461  pip install streamlit\n
+ 1462  streamlit run Practica005.py
+ 1463  source /home/kike/Documentos/Ciencia-datos/venv/bin/activate
+ 1464  /home/kike/Documentos/Ciencia-datos/venv/bin/python /home/kike/Documentos/Ciencia-datos/Practica005.py
+ 1465  pip install plotly
+ 1466  streamlit run Practica005.py
+ 1467  source /home/kike/Documentos/Ciencia-datos/venv/bin/activate
+ 1468  /home/kike/Documentos/Ciencia-datos/venv/bin/python /home/kike/Documentos/Ciencia-datos/Practica005.py
+ 1469  pip install imblearn
+ 1470  streamlit run Practica005.py
+ 1471  source /home/kike/Documentos/Ciencia-datos/venv/bin/activate
+ 1472  /home/kike/Documentos/Ciencia-datos/venv/bin/python /home/kike/Documentos/Ciencia-datos/Practica0005.py
+ 1473  streamlit run Practica0005.py
+ 1474  source /home/kike/Documentos/Ciencia-datos/venv/bin/activate
+ 1475  /home/kike/Documentos/Ciencia-datos/venv/bin/python /home/kike/Documentos/Ciencia-datos/Practica005.py
+ 1476  streamlit run Practica005.py
+ 1477  source /home/kike/Documentos/Ciencia-datos/venv/bin/activate
+ 1478  /home/kike/Documentos/Ciencia-datos/venv/bin/python /home/kike/Documentos/Ciencia-datos/Practica0005.py
+ 1479  streamlit run Practica005.py
+ 1480  source /home/kike/Documentos/Ciencia-datos/venv/bin/activate
+ 1481  /home/kike/Documentos/Ciencia-datos/venv/bin/python /home/kike/Documentos/Ciencia-datos/Practica0005.py
+ 1482  streamlit run Practica0005.py
+ 1483  source /home/kike/Documentos/Ciencia-datos/venv/bin/activate
+ 1484  /home/kike/Documentos/Ciencia-datos/venv/bin/python /home/kike/Documentos/Ciencia-datos/Practica0005.py
+ 1485  streamlit run Practica0005.py
+ 1486  source /home/kike/Documentos/Ciencia-datos/venv/bin/activate
+ 1487  /home/kike/Documentos/Ciencia-datos/venv/bin/python /home/kike/Documentos/Ciencia-datos/Practica0005.py
+ 1488  streamlit run Practica0005.py
+ 1489  source /home/kike/Documentos/Ciencia-datos/venv/bin/activate
+ 1490  /home/kike/Documentos/Ciencia-datos/venv/bin/python /home/kike/Documentos/Ciencia-datos/Practica0005.py
+ 1491  source /home/kike/Documentos/Ciencia-datos/venv/bin/activate
+ 1492  /home/kike/Documentos/Ciencia-datos/venv/bin/python /home/kike/Documentos/Ciencia-datos/Practica0005.py
+ 1493  source /home/kike/Documentos/Ciencia-datos/venv/bin/activate
+ 1494  /home/kike/Documentos/Ciencia-datos/venv/bin/python /home/kike/Documentos/Ciencia-datos/Practica0005.py
+ 1495  streamlit run Practica0005.py 
+ 1496  source /home/kike/Documentos/Ciencia-datos/venv/bin/activate
+ 1497  /home/kike/Documentos/Ciencia-datos/venv/bin/python /home/kike/Documentos/Ciencia-datos/Practica0005.py
+ 1498  streamlit run Practica005.py 
+ 1499  source /home/kike/Documentos/Ciencia-datos/venv/bin/activate
+ 1500  /home/kike/Documentos/Ciencia-datos/venv/bin/python /home/kike/Documentos/Ciencia-datos/Practica05.py
+ 1501  pip install matplotlib
+ 1502  streamlit run Practica05.py 
+ 1503  source /home/kike/Documentos/Ciencia-datos/venv/bin/activate
+ 1504  /home/kike/Documentos/Ciencia-datos/venv/bin/python /home/kike/Documentos/Ciencia-datos/Practica05.py
+ 1505  source /home/kike/Documentos/Ciencia-datos/venv/bin/activate
+ 1506  /home/kike/Documentos/Ciencia-datos/venv/bin/python "/home/kike/Documentos/Ciencia-datos/Prueba(3).py"
+ 1507  streamlit run Prueba.py
+ 1508  source /home/kike/Documentos/Ciencia-datos/venv/bin/activate
+ 1509  /home/kike/Documentos/Ciencia-datos/venv/bin/python /home/kike/Documentos/Ciencia-datos/Prueba.py
+ 1510  streamlit run Prueba.py
+ 1511  pip install openpyxl
+ 1512  source /home/kike/Documentos/Ciencia-datos/venv/bin/activate
+ 1513  /home/kike/Documentos/Ciencia-datos/venv/bin/python /home/kike/Documentos/Ciencia-datos/Prueba.py
+ 1514  pip install openpyxl
+ 1515  streamlit run Prueba.py
+ 1516  source /home/kike/Documentos/Ciencia-datos/venv/bin/activate
+ 1517  /home/kike/Documentos/Ciencia-datos/venv/bin/python /home/kike/Documentos/Ciencia-datos/Prueba.py
+ 1518  streamlit run Prueba.py
+ 1519  source /home/kike/Documentos/Ciencia-datos/venv/bin/activate
+ 1520  /home/kike/Documentos/Ciencia-datos/venv/bin/python /home/kike/Documentos/Ciencia-datos/streamlit_csv_editor_fixed.py
+ 1521  streamlit run streamlit_csv_editor_fixed.py.py
+ 1522  streamlit run streamlit_csv_editor_fixed.py
+ 1523  source /home/kike/Documentos/Ciencia-datos/venv/bin/activate
+ 1524  /home/kike/Documentos/Ciencia-datos/venv/bin/python /home/kike/Documentos/Ciencia-datos/streamlit_csv_editor_fixed.py
+ 1525  streamlit run streamlit_csv_editor_fixed.py
+ 1526  source /home/kike/Documentos/Ciencia-datos/venv/bin/activate
+ 1527  /home/kike/Documentos/Ciencia-datos/venv/bin/python /home/kike/Documentos/Ciencia-datos/streamlit_csv_editor_fixed.py
+ 1528  source /home/kike/Documentos/Ciencia-datos/venv/bin/activate
+ 1529  /home/kike/Documentos/Ciencia-datos/venv/bin/python /home/kike/Documentos/Ciencia-datos/streamlit_csv_editor_fixed.py
+ 1530  streamlit run streamlit_csv_editor_fixed.py
+ 1531  source /home/kike/Documentos/Ciencia-datos/venv/bin/activate
+ 1532  /home/kike/Documentos/Ciencia-datos/venv/bin/python /home/kike/Documentos/Ciencia-datos/streamlit_csv_editor_fixed.py
+ 1533  sudo nano /home/kike/.config/hypr/UserConfigs/UserSettings.conf
+ 1534  sudo nano /home/kike/.config/hypr/hyprland.conf
+ 1535  sudo nano /home/kike/.config/hypr/UserConfigs/UserSettings.conf
+ 1536  source /home/kike/Documentos/Ciencia-datos/venv/bin/activate
+ 1537  /home/kike/Documentos/Ciencia-datos/venv/bin/python /home/kike/Documentos/Ciencia-datos/Prueba.py
+ 1538  history 
+ 1539  sudo /opt/lampp/lampp start\n
+ 1540  /usr/bin/python /home/kike/Documentos/Graficacion-computacipnal/proyecto.py
+ 1541  code
+ 1542  source /home/kike/Documentos/Ciencia-datos/venv/bin/activate
+ 1543  /home/kike/Documentos/Ciencia-datos/venv/bin/python /home/kike/Documentos/Ciencia-datos/Prueba.py
+ 1544  streamlit run Prueba.py
+ 1545  source /home/kike/Documentos/Ciencia-datos/venv/bin/activate
+ 1546  /home/kike/Documentos/Ciencia-datos/venv/bin/python /home/kike/Documentos/Ciencia-datos/Prueba2.py
+ 1547  streamlit run Prueba2.py
+ 1548  source /home/kike/Documentos/Ciencia-datos/venv/bin/activate
+ 1549  /home/kike/Documentos/Ciencia-datos/venv/bin/python /home/kike/Documentos/Ciencia-datos/Prueba.py
+ 1550  streamlit run Prueba.py
+ 1551  source /home/kike/Documentos/Ciencia-datos/venv/bin/activate
+ 1552  /home/kike/Documentos/Ciencia-datos/venv/bin/python /home/kike/Documentos/Ciencia-datos/Prueba.py
+ 1553  source /home/kike/Documentos/Ciencia-datos/venv/bin/activate
+ 1554  /home/kike/Documentos/Ciencia-datos/venv/bin/python /home/kike/Documentos/Ciencia-datos/Prueba.py
+ 1555  source /home/kike/Documentos/Ciencia-datos/venv/bin/activate
+ 1556  /home/kike/Documentos/Ciencia-datos/venv/bin/python /home/kike/Documentos/Ciencia-datos/Prueba2.py
+ 1557  streamlit run Prueba2.py
+ 1558  source /home/kike/Documentos/Ciencia-datos/venv/bin/activate
+ 1559  /home/kike/Documentos/Ciencia-datos/venv/bin/python /home/kike/Documentos/Ciencia-datos/Prueba2.py
+ 1560  streamlit run Prueba2.py
+ 1561  source /home/kike/Documentos/Ciencia-datos/venv/bin/activate
+ 1562  /home/kike/Documentos/Ciencia-datos/venv/bin/python /home/kike/Documentos/Ciencia-datos/Prueba2.py
+ 1563  source /home/kike/Documentos/Ciencia-datos/venv/bin/activate
+ 1564  /home/kike/Documentos/Ciencia-datos/venv/bin/python /home/kike/Documentos/Ciencia-datos/Prueba2.py
+ 1565  streamlit run Prueba2.py
+ 1566  source /home/kike/Documentos/Ciencia-datos/venv/bin/activate
+ 1567  /home/kike/Documentos/Ciencia-datos/venv/bin/python /home/kike/Documentos/Ciencia-datos/Prueba2.py
+ 1568  source /home/kike/Documentos/Ciencia-datos/venv/bin/activate
+ 1569  /home/kike/Documentos/Ciencia-datos/venv/bin/python /home/kike/Documentos/Ciencia-datos/Prueba2.py
+ 1570  streamlit run Prueba2.py
+ 1571  source /home/kike/Documentos/Ciencia-datos/venv/bin/activate
+ 1572  /home/kike/Documentos/Ciencia-datos/venv/bin/python /home/kike/Documentos/Ciencia-datos/Prueba2.py
+ 1573  source /home/kike/Documentos/Ciencia-datos/venv/bin/activate
+ 1574  /home/kike/Documentos/Ciencia-datos/venv/bin/python /home/kike/Documentos/Ciencia-datos/Prueba2.py
+ 1575  source /home/kike/Documentos/Ciencia-datos/venv/bin/activate
+ 1576  /home/kike/Documentos/Ciencia-datos/venv/bin/python /home/kike/Documentos/Ciencia-datos/Prueba2.py
+ 1577  streamlit run Prueba2.py
+ 1578  source /home/kike/Documentos/Ciencia-datos/venv/bin/activate
+ 1579  /home/kike/Documentos/Ciencia-datos/venv/bin/python /home/kike/Documentos/Ciencia-datos/Prueba2.py
+ 1580  source /home/kike/Documentos/Ciencia-datos/venv/bin/activate
+ 1581  /home/kike/Documentos/Ciencia-datos/venv/bin/python /home/kike/Documentos/Ciencia-datos/Prueba2.py
+ 1582  source /home/kike/Documentos/Ciencia-datos/venv/bin/activate
+ 1583  /home/kike/Documentos/Ciencia-datos/venv/bin/python /home/kike/Documentos/Ciencia-datos/Prueba2.py
+ 1584  source /home/kike/Documentos/Ciencia-datos/venv/bin/activate
+ 1585  /home/kike/Documentos/Ciencia-datos/venv/bin/python /home/kike/Documentos/Ciencia-datos/Prueba2.py
+ 1586  source /home/kike/Documentos/Ciencia-datos/venv/bin/activate
+ 1587  /home/kike/Documentos/Ciencia-datos/venv/bin/python /home/kike/Documentos/Ciencia-datos/Prueba.py
+ 1588  streamlit run Prueba1.py
+ 1589  streamlit run Prueba.py
+ 1590  /usr/bin/python /home/kike/Documentos/Ciencia-datos/Prueba2.py
+ 1591  streamlit run Prueba2.py
+ 1592  pip install streamlit\n
+ 1593  sudo dm
+ 1594  /usr/bin/python /home/kike/Documentos/Ciencia-datos/Prueba2.py
+ 1595  streamlit run Prueba2.py
+ 1596  history | grep venv
+ 1597  source /home/kike/Documentos/Ciencia-datos/venv/bin/activate
+ 1598  streamlit run Prueba2.py
+ 1599  /usr/bin/python /home/kike/Documentos/Ciencia-datos/Prueba2.py
+ 1600  streamlit run Prueba2.py
+ 1601  /usr/bin/python /home/kike/Documentos/Ciencia-datos/Prueba2.py
+ 1602  streamlit run Prueba2.py
+ 1603  source /home/kike/Documentos/Ciencia-datos/venv/bin/activate
+ 1604  streamlit run Prueba2.py
+ 1605  /usr/bin/python /home/kike/Documentos/Ciencia-datos/Prueba2.py
+ 1606  source /home/kike/Documentos/Ciencia-datos/venv/bin/activate
+ 1607  streamlit run Prueba2.py
+ 1608  sudo cat /etc/group\n
+ 1609  sudo userdel -r Carolina\n
+ 1610  sudo userdel -r carolina\n
+ 1611  sudo userdel -r 1002\n
+ 1612  sudo userdel Carolina\n
+ 1613  sudo userdel -r Carolina\n
+ 1614  id Carolina
+ 1615  sudo groupdel Carolina 
+ 1616  sudo userdel -r Karla  
+ 1617  sudo cat /etc/group\n
+ 1618  sudo groupdel Carolina 
+ 1619  sudo cat /etc/group\n
+ 1620  sudo groupdel teamsscrum
+ 1621  sudo groupdel TeamScrum
+ 1622  cat /etc/group
+ 1623  sudo groupadd TeamScrum
+ 1624  sudo useradd Carolina 
+ 1625  cat /etc/group
+ 1626  sudo passwd Carolina
+ 1627  sudo chfn Carolina \n\n
+ 1628  sudo usermod -l Carolina Alexis
+ 1629  sudo usermod -l Alexis Carolina 
+ 1630  sudo usermod -aG TeamScrum Alexis 
+ 1631  sudo chage -l Alexis\n\n
+ 1632  sudo chage -E 2025-10-03 Alexis
+ 1633  sudo passwd Alexis
+ 1634  sudo chage -l Alexis\n\n
+ 1635  su - Alexis 
+ 1636  sudo usermod -aG wheel Alexis
+ 1637  grep -E "port|PermitRootLogin|PasswordAuthentication" /etc/ssh/sshd_config
+ 1638  sudo grep -E "port|PermitRootLogin|PasswordAuthentication" /etc/ssh/sshd_config
+ 1639  su Alexis
+ 1640  hostname -I
+ 1641  putty
+ 1642  su Alexis
+ 1643  su - Alexis 
+ 1644  history | grep putty
+ 1645  sudo dnf install putty
+ 1646  su - Alexis 
+ 1647  putty
+ 1648  hostname -I
+ 1649  putty
+ 1650  sudo ufw status verbose\n
+ 1651  sudo ufw enable
+ 1652  sudo ufw status verbose\n
+ 1653  sudo ufw reset
+ 1654  sudo ufw default deny 80
+ 1655  sudo ufw deny 80
+ 1656  history | grep ufw
+ 1657  sudo ufw deny from 192.178.56.206
+ 1658  sudo ufw deny 7000:7006/tcp
+ 1659  sudo ufw deny from 192.178.56.206 to any port 22
+ 1660  sudo ufw status verbose\n
+ 1661  sudo ufw eba\n
+ 1662  sudo ufw enable\n
+ 1663  sudo ufw status verbose\n
+ 1664  su - Alexis 
+ 1665  tldr systemctl
+ 1666  sudo userdel -r Alexis
+ 1667  sudo groupdel TeamScrum
+ 1668  cat /etc/group
+ 1669  sudo userdel -r Carolina
+ 1670  sudo groupdel Carolina 
+ 1671  sudo ufw reset
+ 1672  sudo dnf update -y
+ 1673  iptables 
+ 1674  iptables -P INPUT DROP
+ 1675  sudo iptables -P INPUT DROP
+ 1676  sudo iptables -P FORMARD DROP
+ 1677  sudo iptables -P FORWARD DROP
+ 1678  sudo iptables -P OUTPUT ACCEP
+ 1679  sudo iptables -P OUTPUT ACCEPT
+ 1680  sudo iptables -L
+ 1681  sudo iptables -F INPUT
+ 1682  sudo iptables -F FORWARD
+ 1683  sudo iptables -F OUTPUT
+ 1684  sudo iptables -F -t nat
+ 1685  sudo iptables -L
+ 1686  cd Documentos\n\n
+ 1687  iptables -L
+ 1688  sudo iptables -L
+ 1689  sudo iptables -L -v
+ 1690  sudo iptables -nL
+ 1691  sudo iptables -P INPUT DROP
+ 1692  sudo iptables -L -v
+ 1693  sudo iptables -A FORWARD -i eth1 -o etch0 -j ACCEPT
+ 1694  sudo iptables -L -v
+ 1695  sudo iptables -A FORWARD -i eth1 -o eth0 -j ACCEPT
+ 1696  sudo iptables -L -v
+ 1697  sudo iptables -A INPUT -i eth1 -o eth0 -j DROP
+ 1698  sudo iptables -A INPUT -i eth1 -o eth0 ACCEPT
+ 1699  sudo iptables -A INPUT -i eth1 -j ACCEPT
+ 1700  sudo iptables -A INPUT -i eth1 -j DROP
+ 1701  sudo iptables -L -v
+ 1702  sudo iptables -A INPUT -i eth1 -j REJECT
+ 1703  sudo iptables -L -v
+ 1704  sudo iptables -A FORWRD -i ethO -O eth0 -j -m state --state ESTABILISHED, RELATEC -j ACCEPT 
+ 1705  sudo iptables -A FORWRD -i ethO -O eth0 -j -m state --state ESTABLISHED, RELATEC -j ACCEPT 
+ 1706  sudo iptables -A FORWRD -i ethO -o eth0 -j -m state --state ESTABLISHED, RELATEC -j ACCEPT 
+ 1707  sudo iptables -A FORWRD -i ethO -o eth0 -j -m state --state ESTABLISHED,RELATED -j ACCEPT 
+ 1708  iptables -A FORWARD -i eth0 -o eth1 -m state --state ESTABLISHED,RELATED -j ACCEPT
+ 1709  sudo iptables -A FORWARD -i eth0 -o eth1 -m state --state ESTABLISHED,RELATED -j ACCEPT
+ 1710  sudo iptables -L -v
+ 1711  sudo iptables -A INPUT -i eth0 -o eth1 -m state --state ESTABLISHED,RELATED -j ACCEPT
+ 1712  sudo iptables -A INPUT -i eth0 -m state --state ESTABLISHED,RELATED -j ACCEPT
+ 1713  sudo iptables -A OUTPUT -i eth0 -o eth1 -m state --state ESTABLISHED,RELATED -j ACCEPT
+ 1714  sudo iptables -A OUTPUT -o eth1 -m state --state ESTABLISHED,RELATED -j ACCEPT
+ 1715  sudo iptables -L -v
+ 1716  sudo iptables -A INPUT -i eth1 -s 0/0 -d 0/0 -j ACCEPT
+ 1717  sudo iptables -L -v
+ 1718  iptables -A INPUT -i lo -s 0/0 -d 0/0 -j ACCEPT
+ 1719  sudo iptables -A INPUT -i lo -s 0/0 -d 0/0 -j ACCEPT
+ 1720  sudo iptables -L -v
+ 1721  sudo iptables -A POSTROUTING -t nat -s 192.168.0.0/24 -o eth0 -j SNAT --to-source x.y.z.c
+ 1722  sudo iptables -A POSTROUTING -t nat -s 192.168.0.0/24 -o eth0 -j SNAT --to-source 1.1.1.1
+ 1723  sudo iptables -L -v
+ 1724  sudo iptables -L
+ 1725  sudo iptables -nL
+ 1726  tldr iptables
+ 1727  sudo iptables -ta nat -L -v
+ 1728  sudo iptables -t nat -L -v
+ 1729  sudo iptables -t NAT -L -v
+ 1730  sudo iptables -t nat -L -v
+ 1731  sudo iptables -A INPUT -t nat -s 192.168.0.0/24 -o eth0 -j SNAT --to-source 1.1.1.1
+ 1732  sudo iptables -A INPUT -t nat -s 192.168.0.0/24 -i eth0 -j SNAT --to-source 1.1.1.1
+ 1733  sudo iptables -A OUTPUT -t nat -s 192.168.0.0/24 -o eth0 -j SNAT --to-source 1.1.1.1
+ 1734  sudo iptables -A INPUT -p tcp -s 0/0 -d 0/0 --destination-port 25 --syn -j ACCEPT
+ 1735  sudo iptables -A INPUT -p tcp -s 0/0 -d 0/0 --destination-port 80 --syn -j ACCEPT
+ 1736  sudo iptables -A INPUT -p tcp -s 0/0 -d 0/0 --destination-port 443 --syn -j ACCEPT
+ 1737  sudo iptables -A INPUT -p tcp -s 0/0 -d 0/0 --destination-port 22 --syn -j ACCEPT
+ 1738  sudo iptables -L -v
+ 1739  sudo iptables -A INPUT -p tcp -s 0/0 -d w.x.y.z/32 --destination-port 25 --syn -j ACCEPT\n\n
+ 1740  sudo iptables -A INPUT -p tcp -s 0/0 -d 1.1.1.1/32 --destination-port 25 --syn -j ACCEPT\n\n
+ 1741  sudo iptables -A INPUT -p tcp -s 0/0 -d 0/0 --destination-port 110 --syn -j ACCEPT
+ 1742  sudo iptables -A INPUT -p tcp -s 0/0 -d 0/0 --destination-port 995 --syn -j ACCEPT
+ 1743  sudo iptables -A INPUT -p tcp -s 0/0 -d 0/0 --destination-port 143 --syn -j ACCEPT
+ 1744  sudo iptables -A INPUT -p tcp -s 0/0 -d 0/0 --destination-port 993 --syn -j ACCEPT
+ 1745  sudo iptables -A INPUT -i eth1 -p tcp --sport 68 --dport 67 -j ACCEPT
+ 1746  sudo iptables -A INPUT -i eth1 -p udp --sport 68 --dport 67 -j ACCEPT
+ 1747  sudo iptables -A INPUT -p udp -s 200.33.146.217/32 --source-port 53 -d 0/0 -j ACCEPT
+ 1748  sudo iptables -L -v
+ 1749  sudo iptables -A INPUT -p tcp --destination-port 22 -j DROP
+ 1750  sudo iptables -A INPUT -p tcp --destination-port 23 -j DROP
+ 1751  iptables -A INPUT -s 200.33.146.217 -j DROP
+ 1752  sudo iptables -A INPUT -s 200.33.146.217 -j DROP
+ 1753  sudo iptables -A OUTPUT -d 200.33.146.217 -s 192.168.0.0/24 -j REJECT
+ 1754  sudo iptables -L -v
+ 1755  sudo iptables -D INPUT -s 200.33.146.217 -j DROP
+ 1756  sudo iptables -L -v
+ 1757  sudo iptables -nL
+ 1758  service iptables save
+ 1759  sudo service iptables save
+ 1760  sudo systemctl start iptables
+ 1761  man cron
+ 1762  sudo man cron
+ 1763  man crond
+ 1764  man cron
+ 1765  sudo ps -ef | grep CRON
+ 1766  sudo ps -ef | grep CROND
+ 1767  sudo ps -ef | grep cron
+ 1768  crontab -e
+ 1769  sudo crontab -e
+ 1770  sudo ps -ef | grep crontab
+ 1771  su kike
+ 1772  sudo su kike
+ 1773  sudo crontab -e
+ 1774  sudo nano crontab
+ 1775  sudo crontab -e
+ 1776  sudo iptables -L -v
+ 1777  sudo cat /tmp
+ 1778  sudo cat /tmp/
+ 1779  sudo cd /tmp
+ 1780  ls
+ 1781  cd /tmp
+ 1782  ls
+ 1783  ls -la
+ 1784  crontab -e
+ 1785  sudo iptables -A FORWARD -i eth1 -o eth0 -j ACCEPT 
+ 1786  sudo iptables -A FORWARD -i eth0 -o eth1 -m state --state ESTABLISHED,RELATED -j ACCEPT
+ 1787  sudo iptables -A INPUT -i eth0 -m state --state ESTABLISHED,RELATED -j ACCEPT
+ 1788  sudo iptables -A INPUT -i eth1 -s 0/0 -d 0/0 -j ACCEPT
+ 1789  sudo iptables -A INPUT -i lo -s 0/0 -d 0/0 -j ACCEPT
+ 1790  sudo iptables -A POSTROUTING -t nat -s 192.168.0.0/24 -o eth0 -j SNAT --to-source 1.1.1.1
+ 1791  sudo iptables -A INPUT -i eth0 -s 1.1.1.1/32 -j DROP
+ 1792  sudo iptables -A INPUT -i eth0 -s 192.168.0.0/24 -j DROP
+ 1793  sudo iptables -A INPUT -i eth0 -s 127.0.0.0/8 -j DROP
+ 1794  sudo iptables -A INPUT -p tcp -s 0/0 -d 0/0 --destination-port 25 --syn -j ACCEPT
+ 1795  sudo iptables -A INPUT -p tcp -s 0/0 -d 0/0 --destination-port 80 --syn -j ACCEPT
+ 1796  sudo iptables -A INPUT -p tcp -s 0/0 -d 0/0 --destination-port 443 --syn -j ACCEPT
+ 1797  sudo iptables -A INPUT -p tcp -s 0/0 -d 0/0 --destination-port 22 --syn -j ACCEPT
+ 1798  iptables -A INPUT -p tcp -s 0/0 -d 1.1.1.1/32 --destination-port 25 --syn -j ACCEPT
+ 1799  sudo iptables -A INPUT -p tcp -s 0/0 -d 1.1.1.1/32 --destination-port 25 --syn -j ACCEPT
+ 1800  sudo iptables -A INPUT -p tcp -s 0/0 -d 0/0 --destination-port 110 --syn -j ACCEPT
+ 1801  sudo iptables -A INPUT -p tcp -s 0/0 -d 0/0 --destination-port 995 --syn -j ACCEPT
+ 1802  sudo iptables -A INPUT -p tcp -s 0/0 -d 0/0 --destination-port 143 --syn -j ACCEPT
+ 1803  sudo iptables -A INPUT -p tcp -s 0/0 -d 0/0 --destination-port 993 --syn -j ACCEPT
+ 1804  sudo iptables -A INPUT -i eth1 -p tcp --sport 68 --dport 67 -j ACCEPT
+ 1805  sudo iptables -A INPUT -i eth1 -p udp --sport 68 --dport 67 -j ACCEPT
+ 1806  sudo iptables -A INPUT -p udp -s 200.33.146.217/32 --source-port 53 -d 0/0 -j ACCEPT
+ 1807  sudo iptables -A INPUT -p tcp --destination-port 22 -j DROP
+ 1808  iptables -A INPUT -p udp --destination-port 23 -j DROP
+ 1809  sudo iptables -A INPUT -p udp --destination-port 23 -j DROP
+ 1810  iptables -A INPUT -s 200.33.146.217 -j DROP
+ 1811  sudo iptables -A INPUT -s 200.33.146.217 -j DROP
+ 1812  sudo iptables -A OUTPUT -d 200.33.146.217 -s 192.168.0.0/24 -j REJECT
+ 1813  sudo iptables -L -v
+ 1814  sudo iptables -A OUTPUT -o eth1 -m state --state ESTABLISHED,RELATED -j ACCEPT
+ 1815  sudo iptables -A OUTPUT -o eth0 -j ACCEPT
+ 1816  sudo iptables -L -v
+ 1817  crontab -e\n
+ 1818  export EDITOR=nano\ncrontab -e\n
+ 1819  export EDITOR=nano\n
+ 1820  crontab -e\n
+ 1821  sudo crontab -e\n
+ 1822  command -v crontab || which crontab || ls -l /usr/bin/crontab\n
+ 1823  crond 
+ 1824  sudo dnf install -y cronie
+ 1825  crontab -e\n
+ 1826  sudo systemctl enable --now crond
+ 1827  crontab -e\n
+ 1828  command -v crontab
+ 1829  crontab -l
+ 1830  crontab -e\n
+ 1831  history | grep lamp
+ 1832  sudo /opt/lampp/lampp start\n
+ 1833  /bin/python /opt/lampp/htdocs/Mapa/f.py
+ 1834  pip install sqlalchemy
+ 1835  /bin/python /opt/lampp/htdocs/Mapa/f.py
+ 1836  pip install pymysql\n
+ 1837  /bin/python /opt/lampp/htdocs/Mapa/f.py
+ 1838  /bin/python -m pip install --user pymysql\n
+ 1839  /bin/python /opt/lampp/htdocs/Mapa/f.py
+ 1840  sudo ss -ltnp | grep 3306
+ 1841  /bin/python /opt/lampp/htdocs/Mapa/f.py
+ 1842  sudo /opt/lampp/lampp start\n
+ 1843  /bin/python /opt/lampp/htdocs/Mapa/f.py
+ 1844  /bin/python /opt/lampp/htdocs/Mapa/app.py
+ 1845  pip install flask
+ 1846  /bin/python /opt/lampp/htdocs/Mapa/app.py
+ 1847  pip install flask_cors
+ 1848  /bin/python /opt/lampp/htdocs/Mapa/app.py
+ 1849  cd /opt/lampp/htdocs/Mapa
+ 1850  python3 app.py init
+ 1851  python3 app.py\n
+ 1852  /bin/python /opt/lampp/htdocs/Mapa/app.py
+ 1853  /opt/lampp/bin/mysql -u root -e "SELECT \n  COUNT(*) AS total,\n  SUM(CASE WHEN geom IS NULL THEN 1 ELSE 0 END) AS n_geom_nulo,\n  SUM(CASE WHEN latitud IS NULL OR longitud IS NULL OR latitud = '' OR longitud = '' THEN 1 ELSE 0 END) AS sin_latlon\nFROM denue_inegi_09;" -D inegi_db -B\n
+ 1854  /opt/lampp/bin/mysql -u root -e "SELECT id, nom_estab, latitud, longitud, geom IS NULL AS geom_nulo FROM denue_inegi_09 WHERE id=9583202 LIMIT 1;" -D inegi_db -B\n
+ 1855  /opt/lampp/bin/mysql -u root -e "\nUSE inegi_db;\nUPDATE denue_inegi_09\nSET geom = ST_GeomFromText(CONCAT('POINT(', REPLACE(TRIM(longitud),',','.'), ' ', REPLACE(TRIM(latitud),',','.'), ')'), 4326)\nWHERE (geom IS NULL OR geom = '') \n  AND latitud IS NOT NULL AND longitud IS NOT NULL\n  AND TRIM(latitud) <> '' AND TRIM(longitud) <> '' ;\nSELECT ROW_COUNT() AS filas_actualizadas;\n" -D inegi_db -B\n
+ 1856  /opt/lampp/bin/mysql -u root -e "\nUSE inegi_db;\nALTER TABLE denue_inegi_09 ADD SPATIAL INDEX IF NOT EXISTS idx_geom (geom);\n" -D inegi_db -B\n
+ 1857  /opt/lampp/bin/mysql -u root -e "\nUSE inegi_db;\nSHOW INDEX FROM denue_inegi_09 WHERE Key_name='idx_geom';\n" -D inegi_db -B\n# si no devuelve filas, entonces:\n# /opt/lampp/bin/mysql -u root -e "ALTER TABLE denue_inegi_09 ADD SPATIAL INDEX idx_geom (geom);" -D inegi_db -B\n
+ 1858  /opt/lampp/bin/mysql -u root -e "\nUSE inegi_db;\nSET @poly = 'POLYGON((-98.93898623 19.3734075, -98.92898623 19.3734075, -98.92898623 19.3634075, -98.93898623 19.3634075, -98.93898623 19.3734075))';\nSELECT id, nom_estab, latitud, longitud\nFROM denue_inegi_09\nWHERE ST_Intersects(ST_GeomFromText(@poly,4326), geom)\n  AND id = 9583202\nLIMIT 50;\n" -D inegi_db -B\n
+ 1859  curl -s -X POST http://127.0.0.1:5000/query_polygon \\n  -H "Content-Type: application/json" \\n  -d '{"coords":[[19.3734075,-98.93898623],[19.3734075,-98.92898623],[19.3634075,-98.92898623],[19.3634075,-98.93898623]], "q":"" }' | jq .\n
+ 1860  /opt/lampp/bin/mysql -u root -e "\nUSE inegi_db;\nSELECT id, latitud, longitud\nFROM denue_inegi_09\nWHERE id = 9583202\nLIMIT 1;\n" -D inegi_db -B\n
+ 1861  /bin/python /opt/lampp/htdocs/Mapa/app.py
+ 1862  /opt/lampp/bin/mysql -u root -e "USE inegi_db; SELECT SUM(geom IS NULL) AS n_geom_nulo FROM denue_inegi_09;" -D inegi_db -B\n
+ 1863  /opt/lampp/bin/mysql -u root -e "\nUSE inegi_db;\nALTER TABLE denue_inegi_09\n  MODIFY COLUMN geom POINT NOT NULL;\nALTER TABLE denue_inegi_09\n  ADD SPATIAL INDEX idx_geom (geom);\n" -D inegi_db -B\n
+ 1864  /opt/lampp/bin/mysql -u root -e "USE inegi_db; SHOW INDEX FROM denue_inegi_09 WHERE Key_name='idx_geom'\G" -D inegi_db\n
+ 1865  curl -s -X POST http://127.0.0.1:5000/query_polygon \\n  -H "Content-Type: application/json" \\n  -d '{"coords":[[19.3734075,-98.93898623],[19.3734075,-98.92898623],[19.3634075,-98.92898623],[19.3634075,-98.93898623]], "q":"" }' | jq .\n
+ 1866  /bin/python /opt/lampp/htdocs/Mapa/app.py
+ 1867  curl -s -X POST http://127.0.0.1:5000/query_polygon \\n  -H "Content-Type: application/json" \\n  -d '{"coords":[[19.3734075,-98.93898623],[19.3734075,-98.92898623],[19.3634075,-98.92898623],[19.3634075,-98.93898623]], "q":"" }' | jq .\n
+ 1868  /bin/python /opt/lampp/htdocs/Mapa/app.py
+ 1869  /bin/python /opt/lampp/htdocs/Mapa/f.py
+ 1870  python3 app.py init\nD
+ 1871  python3 app.py init\n
+ 1872  /bin/python /opt/lampp/htdocs/Mapa/app.py
+ 1873  curl -X POST http://localhost:5000/query_polygon \\n  -H "Content-Type: application/json" \\n  -d '{"coords":[[19.4,-99.2],[19.4,-99.1],[19.5,-99.1],[19.5,-99.2]]}'\n
+ 1874  /bin/python /opt/lampp/htdocs/Mapa/app.py
+ 1875  /bin/python /opt/lampp/htdocs/mapa/app.py
+ 1876  ^[[200~python3 app.py init
+ 1877  python3 app.py init\n
+ 1878  python3 app.py\n
+ 1879  \n# En la carpeta donde está tu index.html\npython3 -m http.server 8000\n
+ 1880  /bin/python /opt/lampp/htdocs/mapa/app.py
+ 1881  /usr/bin/python /opt/lampp/htdocs/mapa/app.py
+ 1882  python3 -m http.server 8000
+ 1883  /usr/bin/python /opt/lampp/htdocs/mapa/app.py
+ 1884  python3 -m http.server 8000
+ 1885  sudo /opt/lampp/lampp start\n
+ 1886  /bin/python /opt/lampp/htdocs/Mapa2/f.py
+ 1887  cd /opt/lampp/htdocs/Mapa2
+ 1888  ^[[200~python3 app.py init
+ 1889  python3 app.py init\n
+ 1890  python3 app.py\n
+ 1891  /bin/python /opt/lampp/htdocs/Mapa2/app.py
+ 1892  cd /opt/lampp/htdocs/Mapa2
+ 1893  curl -s -X POST http://127.0.0.1:5000/query_polygon \\n  -H "Content-Type: application/json" \\n  -d '{"coords":[[19.3734075,-98.93898623],[19.3734075,-98.92898623],[19.3634075,-98.92898623],[19.3634075,-98.93898623]], "q":"" }' | jq .\n
+ 1894  /bin/python /opt/lampp/htdocs/Mapa2/app.py
+ 1895  sudo /opt/lampp/lampp start\n
+ 1896  code
+ 1897  /usr/bin/python /opt/lampp/htdocs/Mapa2/app.py
+ 1898  cd /opt/lampp/htdocs
+ 1899  Mapa2.zip Mapa2
+ 1900  sudo Mapa2.zip Mapa2
+ 1901  zip Mapa2.zip Mapa2
+ 1902  sudo dnf install -y zip
+ 1903  zip Mapa2.zip Mapa2
+ 1904  /usr/bin/python /opt/lampp/htdocs/Mapa3/app.py
+ 1905  cd /opt/lampp/htdocs
+ 1906  cd /opt/lampp/htdocs/Mapa2
+ 1907  zip Mapa2.zip app.py bd.sql conexion.php denue_inegi_15_2.csv f.py index.php obtener_datos.php
+ 1908  /usr/bin/python /opt/lampp/htdocs/Mapa3/app.py
+ 1909  cd /opt/lampp/htdocs/Mapa3
+ 1910  zip Mapa3.zip app.py bd.sql conexion.php denue_inegi_15_2.csv f.py index.php obtener_datos.php
+ 1911  cd /opt/lampp/htdocs/Mapa2
+ 1912  python3 app.py init
+ 1913  /usr/bin/python /opt/lampp/htdocs/Mapa2/app.py
+ 1914  /usr/bin/python /opt/lampp/htdocs/Mapa3/app.py
+ 1915  sudo /
+ 1916  sudo /opt/lampp/lampp start\n
+ 1917  /usr/bin/python /opt/lampp/htdocs/Mapa2/app.py
+ 1918  code
+ 1919  source /home/kike/Documentos/Ciencia-datos/venv/bin/activate
+ 1920  /home/kike/Documentos/Ciencia-datos/venv/bin/python /home/kike/Documentos/Ciencia-datos/laboratorio04.py
+ 1921  pip install kagglehub
+ 1922  /home/kike/Documentos/Ciencia-datos/venv/bin/python /home/kike/Documentos/Ciencia-datos/laboratorio04.py
+ 1923  curl -L -o ~/Downloads/amazon-product-reviews.zip\\n
+ 1924  #!/bin/bash\ncurl -L -o ~/Descargas/amazon-product-reviews.zip\\n  https://www.kaggle.com/api/v1/datasets/download/saurav9786/amazon-product-reviews
+ 1925  #!/bin/bash\ncurl -L -o ~/Descargas/imdb-review-dataset.zip\\n  https://www.kaggle.com/api/v1/datasets/download/utathya/imdb-review-dataset
+ 1926  source /home/kike/Documentos/Ciencia-datos/venv/bin/activate
+ 1927  /home/kike/Documentos/Ciencia-datos/venv/bin/python /home/kike/Documentos/Ciencia-datos/Lab4.py
+ 1928  pip install textblob
+ 1929  /home/kike/Documentos/Ciencia-datos/venv/bin/python /home/kike/Documentos/Ciencia-datos/Lab4.py
+ 1930  pip install seaborn
+ 1931  /home/kike/Documentos/Ciencia-datos/venv/bin/python /home/kike/Documentos/Ciencia-datos/Lab4.py
+ 1932  source /home/kike/Documentos/Ciencia-datos/venv/bin/activate
+ 1933  /home/kike/Documentos/Ciencia-datos/venv/bin/python /home/kike/Documentos/Ciencia-datos/Lab4.py
+ 1934  pip install palority
+ 1935  source /home/kike/Documentos/Ciencia-datos/venv/bin/activate
+ 1936  /home/kike/Documentos/Ciencia-datos/venv/bin/python /home/kike/Documentos/Ciencia-datos/Lab4.py
+ 1937  /home/kike/Documentos/Ciencia-datos/venv/bin/python /home/kike/Documentos/Ciencia-datos/laboratorio04.py
+ 1938  source /home/kike/Documentos/Ciencia-datos/venv/bin/activate
+ 1939  /home/kike/Documentos/Ciencia-datos/venv/bin/python /home/kike/Documentos/Ciencia-datos/laboratorio04.py
+ 1940  python3 laboratorio04.py
+ 1941  source /home/kike/Documentos/Ciencia-datos/venv/bin/activate
+ 1942  /home/kike/Documentos/Ciencia-datos/venv/bin/python /home/kike/Documentos/Ciencia-datos/laboratorio04.py
+ 1943  pip install wordcloud
+ 1944  /home/kike/Documentos/Ciencia-datos/venv/bin/python /home/kike/Documentos/Ciencia-datos/laboratorio04.py
+ 1945  git clone --depth=1 https://github.com/JaKooLit/Fedora-Hyprland.git ~/Fedora-Hyprland
+ 1946  cd ~/Fedora-Hyprland
+ 1947  chmod +x install.sh
+ 1948  ./install.sh
+ 1949  source /home/kike/Documentos/Ciencia-datos/venv/bin/activate
+ 1950  /home/kike/Documentos/Ciencia-datos/venv/bin/python "/home/kike/Documentos/Ciencia-datos/Lab4(1).py"
+ 1951  source /home/kike/Documentos/Ciencia-datos/venv/bin/activate
+ 1952  /home/kike/Documentos/Ciencia-datos/venv/bin/python "/home/kike/Documentos/Ciencia-datos/Lab4(1).py"
+ 1953  code
+ 1954  source /home/kike/Documentos/Ciencia-datos/venv/bin/activate
+ 1955  /home/kike/Documentos/Ciencia-datos/venv/bin/python /home/kike/Documentos/Ciencia-datos/laboratorio04.py
+ 1956  source /home/kike/Documentos/Ciencia-datos/venv/bin/activate
+ 1957  /home/kike/Documentos/Ciencia-datos/venv/bin/python /home/kike/Documentos/Ciencia-datos/Lab4Pag92.py
+ 1958  source /home/kike/Documentos/Ciencia-datos/venv/bin/activate
+ 1959  /home/kike/Documentos/Ciencia-datos/venv/bin/python /home/kike/Documentos/Ciencia-datos/Lab6.py
+ 1960  source /home/kike/Documentos/Ciencia-datos/venv/bin/activate
+ 1961  /home/kike/Documentos/Ciencia-datos/venv/bin/python /home/kike/Documentos/Ciencia-datos/Lab6.py
+ 1962  source /home/kike/Documentos/Ciencia-datos/venv/bin/activate
+ 1963  /home/kike/Documentos/Ciencia-datos/venv/bin/python /home/kike/Documentos/Ciencia-datos/Lab6.py
+ 1964  source /home/kike/Documentos/Ciencia-datos/venv/bin/activate
+ 1965  /home/kike/Documentos/Ciencia-datos/venv/bin/python /home/kike/Documentos/Ciencia-datos/Lab6.py
+ 1966  source /home/kike/Documentos/Ciencia-datos/venv/bin/activate
+ 1967  /home/kike/Documentos/Ciencia-datos/venv/bin/python /home/kike/Documentos/Ciencia-datos/Lab6.py
+ 1968  source /home/kike/Documentos/Ciencia-datos/venv/bin/activate
+ 1969  /home/kike/Documentos/Ciencia-datos/venv/bin/python /home/kike/Documentos/Ciencia-datos/Lab6.py
+ 1970  source /home/kike/Documentos/Ciencia-datos/venv/bin/activate
+ 1971  /home/kike/Documentos/Ciencia-datos/venv/bin/python /home/kike/Documentos/Ciencia-datos/Lab6.py
+ 1972  uptime
+ 1973  cat /etc/group
+ 1974  time
+ 1975  top -d 3
+ 1976  top -1
+ 1977  top -n
+ 1978  top -n 1
+ 1979  whoami\n
+ 1980  users\n
+ 1981  last -n 10\n
+ 1982  ss -tp | grep ssh\n
+ 1983  id kike
+ 1984  top -1
+ 1985  top 
+ 1986  who
+ 1987  w\n
+ 1988  top 
+ 1989  top
+ 1990  loginctl list-sessions\nloginctl show-session <ID> --property=User,Name,Remote,Service,Display,VT\nps -u kike -o pid,tty,etime,cmd\nwho -a\n
+ 1991  ps \n
+ 1992  ps -e
+ 1993  ps -u root
+ 1994  ps -l
+ 1995  ps -x
+ 1996  ps -aux
+ 1997  pstree
+ 1998  vmstat
+ 1999  vmstat -a
+ 2000  vmstat -f
+ 2001  vmstat -d
+ 2002  vmstat 2
+ 2003  vmstat -s
+ 2004  free
+ 2005  free -s 2
+ 2006  free cn 3
+ 2007  free -cn 3
+ 2008  free c n 3
+ 2009  free c 3
+ 2010  free -c 3
+ 2011  free -c 1
+ 2012  free -t
+ 2013  free -l
+ 2014  df 
+ 2015  df -h\n
+ 2016  df -i
+ 2017  df -m
+ 2018  df -df -T
+ 2019  df -T
+ 2020  du home
+ 2021  du -h
+ 2022  du -i
+ 2023  du -h /home
+ 2024  du -sh /home
+ 2025  du -m /home
+ 2026  du -k /home
+ 2027  du -all
+ 2028  cat /etc/shells
+ 2029  cd ..
+ 2030  cat /etc/shells
+ 2031  which bash
+ 2032  sudo su
+ 2033  sudo nano primer.sh
+ 2034  chmod +x primer.sh
+ 2035  sudo chmod +x primer.sh
+ 2036  ls
+ 2037  ./primer.sh
+ 2038  sudo nano primer.sh
+ 2039  ./primer.sh
+ 2040  sudo nano actualizar.sh
+ 2041  sudo chmod +x actualizar.sh
+ 2042  ./actualizar.sh
+ 2043  cd Documentos\n\n
+ 2044  cd Sistemas-operativos 
+ 2045  cd Asistencia 
+ 2046  cd canny
+ 2047  cd Asistencia 
+ 2048  git add 09-Octubre-2025.png
+ 2049  git commit -m "Asistencia 09 de Octubre 2025"
+ 2050  git push -u origin main
+ 2051  git init 
+ 2052  git branch -M main
+ 2053  git add 09-Octubre-2025.png
+ 2054  git commit -m "Asistencia 09 de Octubre 2025"
+ 2055  git push -u origin main
